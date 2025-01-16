@@ -37,6 +37,8 @@ export default {
       },
       borderRadius: {
         2.5: "10px",
+        8: "32px",
+        12: "48px",
       },
       backdropBlur: {
         10: "10px",
