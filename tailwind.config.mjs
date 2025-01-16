@@ -23,14 +23,19 @@ export default {
         bebas: "var(--font-bebas-neue)",
       },
       fontSize: {
+        29: "116px",
         48: "192px",
         49: "196px",
         82.5: "330px",
       },
       letterSpacing: {
         0.19: "0.19200000166893005px",
+        2.38: "2.3774209022521973px",
         5.04: "5.04px",
         9.41: "9.407999992370605px",
+      },
+      lineHeight: {
+        0.92: "92%",
       },
       gap: {
         6.75: "27px",

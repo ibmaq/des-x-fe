@@ -1,4 +1,5 @@
 import { Hero } from "./(components)/Hero";
+import { InfoSection } from "./(components)/InfoSection";
 import { ShowReel } from "./(components)/ShowReel";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <ShowReel />
+      <InfoSection />
     </>
   );
 }

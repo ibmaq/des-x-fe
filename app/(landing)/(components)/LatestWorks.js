@@ -2,7 +2,7 @@ import { Button } from "../../reusable-components/Button";
 
 export const LatestWorks = () => {
   return (
-    <div className="h-screen flex items-center justify-center py-30">
+    <div className="flex items-center justify-center py-30">
       <div className="w-full max-w-6xl object-contain relative">
         {/* <video autoPlay loop muted className="w-full h-full object-contain"> */}
         <video autoPlay loop muted className="mx-auto">
