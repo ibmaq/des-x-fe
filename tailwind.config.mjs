@@ -39,6 +39,7 @@ export default {
       },
       gap: {
         6.75: "27px",
+        15: "60px",
       },
       maxWidth: {
         105.5: "422px",

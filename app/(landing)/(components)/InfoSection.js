@@ -3,7 +3,7 @@ import { Button } from "../../reusable-components/Button";
 
 export const InfoSection = () => {
   return (
-    <div className="flex items-center justify-center py-30 px-9">
+    <div className="flex flex-col gap-15 items-center justify-center py-30 px-9">
       <h2 className="font-bebas text-29 leading-0.92 text-cust-white/30 text-center -tracking-2.38">
         Hello, I'm <span className="text-cust-white">Osama</span>,{" "}
         <span className="text-cust-white">a</span>{" "}
@@ -46,6 +46,7 @@ export const InfoSection = () => {
           Experiences
         </span>
       </h2>
+      <Button text={"Get to know us"} icon={"play"} theme={"primary"} />
     </div>
   );
 };
