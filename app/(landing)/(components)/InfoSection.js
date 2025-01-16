@@ -12,7 +12,7 @@ export const InfoSection = () => {
         </span>{" "}
         <span>
           <Image
-            src={"/images/span-mobile.png"}
+            src={"/images/landing/span-mobile.png"}
             alt="mobile-prototype-design"
             width={90}
             height={90}
@@ -24,7 +24,7 @@ export const InfoSection = () => {
         passion for <span className="text-cust-white">cutting-edge design</span>{" "}
         <span>
           <Image
-            src={"/images/span-mobile.png"}
+            src={"/images/landing/span-mobile.png"}
             alt="mobile-prototype-design"
             width={90}
             height={90}
@@ -36,7 +36,7 @@ export const InfoSection = () => {
           impactful user{" "}
           <span>
             <Image
-              src={"/images/span-mobile.png"}
+              src={"/images/landing/span-mobile.png"}
               alt="mobile-prototype-design"
               width={90}
               height={90}

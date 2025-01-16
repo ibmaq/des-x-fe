@@ -10,7 +10,7 @@ export const LatestWorks = () => {
       services: ["UX/UI Design", "Web Development"],
     },
     {
-      id: 0,
+      id: 1,
       title: "Dably",
       img: "/images/works/dably.png",
       services: ["UX/UI Design", "Web Development"],

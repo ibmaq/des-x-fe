@@ -3,7 +3,7 @@ import { Button } from "../../reusable-components/Button";
 
 export const Hero = () => {
   return (
-    <div className="h-screen flex flex-col gap-32 items-center justify-center">
+    <div className="flex flex-col gap-32 items-center justify-center">
       <div className="text-center">
         <h1 className="font-bebas text-white text-49/none -tracking-5.04 uppercase">
           Crafting <span className="text-primary">Experiences</span>
@@ -12,7 +12,7 @@ export const Hero = () => {
           One pixel{" "}
           <span className="text-primary">
             <Image
-              src={"/images/span-mobile.png"}
+              src={"/images/landing/span-mobile.png"}
               alt="mobile-prototype-design"
               width={232}
               height={136}
