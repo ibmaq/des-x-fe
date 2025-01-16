@@ -3,12 +3,12 @@ import { Button } from "../../reusable-components/Button";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col gap-32 items-center justify-center">
+    <div className="flex flex-col gap-32 items-center justify-center pt-60 pb-36 max-sm:px-4">
       <div className="text-center">
-        <h1 className="font-bebas text-white text-49/none -tracking-5.04 uppercase">
-          Crafting <span className="text-primary">Experiences</span>
-        </h1>
-        <h1 className="font-bebas text-white text-49/none -tracking-5.04 uppercase flex gap-6.75">
+        <h1 className="font-bebas text-white text-18.5 md:text-49 leading-none md:-tracking-5.04 text-center">
+          Crafting <span className="text-primary">Experiences</span>{" "}
+          {/* </h1> */}
+          {/* <h1 className="font-bebas text-white text-base/none md:text-49/none -tracking-5.04 uppercase flex gap-6.75"> */}
           One pixel{" "}
           <span className="text-primary">
             <Image
@@ -16,14 +16,14 @@ export const Hero = () => {
               alt="mobile-prototype-design"
               width={232}
               height={136}
-              className="border border-cust-white/30 rounded-md mt-4"
+              className="max-sm:w-full border border-cust-white/30 rounded-md inline-flex"
             />
           </span>{" "}
           at a time
         </h1>
       </div>
       <div className="w-full flex flex-col gap-8 items-center max-w-182 mx-auto">
-        <p className="uppercase text-cust-white text-center -tracking-0.19 text-xl/6 font-medium">
+        <p className="uppercase text-cust-white text-center -tracking-0.19 text-base/none lg:text-xl/6 font-medium">
           Where creativity meets strategy. We don’t just design—we craft
           experiences that captivate your audience, connect with their needs,
           and drive results that matter. Bold, innovative, and tailored to your

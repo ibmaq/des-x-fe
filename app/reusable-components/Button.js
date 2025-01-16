@@ -5,7 +5,7 @@ export const Button = ({ text, icon, theme = "primary" | "secondary" }) => {
         theme === "primary"
           ? "bg-primary hover:bg-cust-blue border-cust-blue text-white"
           : "bg-cust-white hover:bg-cust-white/80 border-white "
-      } font-extrabold text-xl/none -tracking-0.19 max-w-105.5 hover:scale-105 hover:rounded-12 transition-all duration-150 ease-linear`}
+      } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 max-w-105.5 hover:scale-105 hover:rounded-12 transition-all duration-150 ease-linear`}
     >
       {text}
       <span className="size-7">
