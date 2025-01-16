@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "2xl": "1440px",
+        "3xl": "1920px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -42,6 +46,10 @@ export default {
       },
       backdropBlur: {
         10: "10px",
+      },
+      padding: {
+        "section-2xl": "178px",
+        30: "120px",
       },
     },
   },
