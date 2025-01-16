@@ -23,6 +23,7 @@ export default {
         bebas: "var(--font-bebas-neue)",
       },
       fontSize: {
+        4.8: "19.2px",
         29: "116px",
         48: "192px",
         49: "196px",
@@ -36,9 +37,11 @@ export default {
       },
       lineHeight: {
         0.92: "92%",
+        1.2: "120%",
       },
       gap: {
         6.75: "27px",
+        9.5: "38px",
         15: "60px",
       },
       maxWidth: {

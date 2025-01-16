@@ -1,25 +1,47 @@
+import Image from "next/image";
 import { Button } from "../../reusable-components/Button";
 
 export const LatestWorks = () => {
+  const worksData = [
+    {
+      id: 0,
+      title: "Pendfunds",
+      img: "/images/works/pendfunds.png",
+      services: ["UX/UI Design", "Web Development"],
+    },
+    {
+      id: 0,
+      title: "Dably",
+      img: "/images/works/dably.png",
+      services: ["UX/UI Design", "Web Development"],
+    },
+  ];
   return (
-    <div className="flex items-center justify-center py-30">
-      <div className="w-full max-w-6xl object-contain relative">
-        {/* <video autoPlay loop muted className="w-full h-full object-contain"> */}
-        <video autoPlay loop muted className="mx-auto">
-          <source
-            src="https://uploads-ssl.webflow.com/655b3d9644c731751d03fd3a/655dde8b0bb6c14bc53381f5_linear-overview-transcode.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-cust-black/60 flex justify-center items-center">
-          <Button
-            text={"Watch the full showreel"}
-            icon={"play"}
-            theme={"primary"}
-          />
-        </div>
+    <div className="flex flex-col gap-15 items-center justify-center py-30 px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-9.5">
+        {worksData.map((work, workIndex) => (
+          <div key={workIndex} className="flex flex-col gap-5">
+            <Image
+              src={work.img}
+              alt="mobile-prototype-design"
+              width={1000}
+              height={90}
+              className="border border-cust-white/30 rounded-md mt-4 inline-flex"
+            />
+            <div className="flex justify-between items-center uppercase">
+              <p className="font-extrabold text-2xl/1.2 text-white">
+                {work.title}
+              </p>
+              <div className="flex gap-2 text-4.8/none text-gray-400 -tracking-0.19">
+                {work.services.map((service, serviceIndex) => (
+                  <p key={serviceIndex}>{service}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+      <Button text={"see all works"} icon={"arrow"} theme={"secondary"} />
     </div>
   );
 };
