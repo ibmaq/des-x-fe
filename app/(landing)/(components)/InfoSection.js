@@ -16,7 +16,7 @@ export const InfoSection = () => {
             alt="mobile-prototype-design"
             width={90}
             height={90}
-            className="max-sm:size-9 border border-cust-white/30 rounded-md lg:mt-4 inline-flex"
+            className="max-sm:size-9 border font- border-cust-white/30 rounded-md lg:mt-4 inline-flex"
           />
         </span>{" "}
         based in <span className="text-cust-white">Pakistan</span>. With{" "}

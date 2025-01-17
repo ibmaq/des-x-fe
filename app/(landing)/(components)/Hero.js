@@ -3,13 +3,10 @@ import { Button } from "../../reusable-components/Button";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col gap-32 items-center justify-center pt-60 pb-36 max-sm:px-4">
+    <div className="flex flex-col gap-6 lg:gap-32 items-center justify-center pt-16 lg:pt-44 pb-36 max-sm:px-4">
       <div className="text-center">
         <h1 className="font-bebas text-white text-18.5 md:text-49 leading-none md:-tracking-5.04 text-center">
-          Crafting <span className="text-primary">Experiences</span>{" "}
-          {/* </h1> */}
-          {/* <h1 className="font-bebas text-white text-base/none md:text-49/none -tracking-5.04 uppercase flex gap-6.75"> */}
-          One pixel{" "}
+          Crafting <span className="text-primary">Experiences</span> One pixel{" "}
           <span className="text-primary">
             <Image
               src={"/images/landing/span-mobile.png"}

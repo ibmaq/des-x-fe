@@ -19,6 +19,9 @@ export default {
         "cust-black": "#1A1A1A",
         "cust-blue": "#7C70FF",
       },
+      opacity: {
+        8: "8%",
+      },
       fontFamily: {
         bebas: "var(--font-bebas-neue)",
       },
@@ -57,13 +60,21 @@ export default {
         15: "60px",
         25: "100px",
       },
+      width: {
+        216: "864px",
+      },
       maxWidth: {
         105.5: "422px",
         182: "728px",
+        216: "864px",
+      },
+      maxHeight: {
+        121.75: "487px",
       },
       borderRadius: {
         2.5: "10px",
         8: "32px",
+        9.6: "9.6px",
         12: "48px",
       },
       backdropBlur: {
@@ -72,6 +83,13 @@ export default {
       padding: {
         "section-2xl": "178px",
         30: "120px",
+      },
+      spacing: {
+        20.25: "81px",
+      },
+      zIndex: {
+        1: 1,
+        2: 2,
       },
     },
   },
