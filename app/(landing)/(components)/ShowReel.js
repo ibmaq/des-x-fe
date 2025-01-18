@@ -2,7 +2,7 @@ import { Button } from "../../reusable-components/Button";
 
 export const ShowReel = () => {
   return (
-    <div className="flex items-center justify-center py-30">
+    <div className="flex items-center justify-center lg:py-30 max-sm:px-4">
       <div className="w-full max-w-6xl object-contain relative">
         {/* <video autoPlay loop muted className="w-full h-full object-contain"> */}
         <video autoPlay loop muted className="mx-auto">
