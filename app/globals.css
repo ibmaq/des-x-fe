@@ -59,3 +59,41 @@ body {
   background: var(--background);
   font-family: "Avenir", Arial, sans-serif;
 }
+.main__container {
+  max-width: 1000px;
+  margin-inline: auto;
+  background: rgb(124, 145, 175);
+  padding: 3rem;
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 10px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+}
+
+.enable-animation .marquee__content {
+  animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+/* .marquee:hover .marquee__content {
+  animation-play-state: paused;
+} */

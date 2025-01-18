@@ -12,7 +12,7 @@ export const Hero = () => {
           One pixel{" "}
           <span className="text-primary">
             <Image
-              src={"/images/span-mobile.png"}
+              src={"/images/landing/span-mobile.png"}
               alt="mobile-prototype-design"
               width={232}
               height={136}
