@@ -129,10 +129,10 @@ export const Navbar = () => {
                 className={`relative group flex items-end w-full h-full p-9 menu-link`}
               >
                 <div className="text-container">
-                  <span className="absolute left-0 w-full transition-all ease-in-out duration-500  max-sm:text-cust-white lg:span-white leading-none z-1">
+                  <span className="absolute left-0 w-full transition-all ease-in-out duration-500 max-sm:text-cust-white span-white leading-none z-1">
                     {item.title}
                   </span>
-                  <span className="hidden lg:block absolute left-0 w-full transition-all ease-in-out duration-500 lg:span-black leading-none z-1">
+                  <span className="hidden lg:block absolute left-0 w-full transition-all ease-in-out duration-500 span-black leading-none z-1">
                     {item.title}
                   </span>
                 </div>
