@@ -7,7 +7,7 @@ import { WhatWeOffer } from "./(components)/WhatWeOffer";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto">
+    <div className="w-full mx-auto">
       <Hero />
       <ShowReel />
       <InfoSection />
