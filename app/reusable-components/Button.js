@@ -1,4 +1,11 @@
-export const Button = ({ text, icon, theme = "primary" | "secondary" }) => {
+import Link from "next/link";
+
+export const Button = ({
+  text,
+  icon,
+  theme = "primary" | "secondary",
+  link = null,
+}) => {
   return (
     <button
       className={`uppercase flex w-full items-center justify-between rounded-2.5 backdrop-blur-10 p-5 border ${
@@ -7,7 +14,7 @@ export const Button = ({ text, icon, theme = "primary" | "secondary" }) => {
           : "bg-cust-white hover:bg-cust-white/80 border-white "
       } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 max-w-105.5 hover:scale-105 hover:rounded-12 transition-all duration-150 ease-linear`}
     >
-      {text}
+      {link ? <Link href={link}>{text}</Link> : text}
       <span className="size-7">
         <Icon name={icon} theme={theme} />
       </span>

@@ -44,18 +44,19 @@ export const WhatWeOffer = () => {
       const scrollY = window.scrollY - sectionTop;
 
       cardsRef.current.forEach((card, index) => {
-        const stickyPoint = (index + 2) * 32;
-        const endScroll = stickyPoint + 300;
+        if (card) {
+          const stickyPoint = (index + 2) * 32;
+          const endScroll = stickyPoint + 300;
 
-        // Clamp scrollY to ensure it doesn't exceed boundaries
-        const clampedScrollY = Math.min(
-          Math.max(scrollY, stickyPoint),
-          endScroll
-        );
+          const clampedScrollY = Math.min(
+            Math.max(scrollY, stickyPoint),
+            endScroll
+          );
 
-        if (clampedScrollY >= stickyPoint && clampedScrollY <= endScroll) {
-          card.style.position = "sticky";
-          card.style.top = `${stickyPoint}px`;
+          if (clampedScrollY >= stickyPoint && clampedScrollY <= endScroll) {
+            card.style.position = "sticky";
+            card.style.top = `${stickyPoint}px`;
+          }
         }
       });
     };

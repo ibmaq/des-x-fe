@@ -15,6 +15,14 @@ export const Navbar = () => {
     { title: "contact", link: "/" },
   ];
 
+  const handleActiveState = () => {
+    updateActive((prev) => {
+      const newActiveState = !prev;
+      document.body.style.overflowY = newActiveState ? "hidden" : "auto";
+      return newActiveState;
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop =
@@ -53,25 +61,19 @@ export const Navbar = () => {
           active ? "rounded-b-0 delay-75" : "rounded-b-9.6 delay-500"
         } relative`}
       >
-        <Image
-          src={"/images/logo.png"}
-          alt="des-x-design-logo"
-          width={195}
-          height={36}
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/images/logo.png"}
+            alt="des-x-design-logo"
+            width={195}
+            height={36}
+          />
+        </Link>
         <div className="flex gap-4 items-center">
           <p className="font-bebas text-cust-white text-2xl/none mt-1">Menu</p>
           <span
             className={`menu-burger-icon size-10 ${active ? "active" : ""}`}
-            onClick={() => {
-              updateActive((prev) => {
-                const newActiveState = !prev;
-                document.body.style.overflowY = newActiveState
-                  ? "hidden"
-                  : "auto";
-                return newActiveState;
-              });
-            }}
+            onClick={() => handleActiveState()}
           >
             <svg
               viewBox="0 0 39 40"
@@ -127,6 +129,7 @@ export const Navbar = () => {
               <Link
                 href={item.link}
                 className={`relative group flex items-end w-full h-full p-9 menu-link`}
+                onClick={() => handleActiveState()}
               >
                 <div className="text-container">
                   <span className="absolute left-0 w-full transition-all ease-in-out duration-500 max-sm:text-cust-white span-white leading-none z-1">
