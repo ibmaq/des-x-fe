@@ -5,9 +5,14 @@ export const Footer = () => {
         Hello, I'm Osama, a senior Product Designer based in Pakistan. With
         years of experience and a passion for cutting-edge design.
       </p>
-      <h2 className="text-cust-black text-366/none -tracking-[9.41px] underline">
-        GET IN TOUCH
-      </h2>
+      <div className="h-[366px] relative group overflow-hidden">
+        <h2 className="text-cust-black text-366/none -tracking-[9.41px] underline absolute left-0 footer-text-1 translate-y-0 group-hover:-translate-y-full transition-all ease-in-out duration-700">
+          GET IN TOUCH
+        </h2>
+        <h2 className="group-hover:text-cust-black text-366/none -tracking-[9.41px] underline absolute left-0 footer-text-2 text-cust-white translate-y-full group-hover:translate-y-0 transition-all ease-in-out duration-700">
+          GET IN TOUCH
+        </h2>
+      </div>
     </footer>
   );
 };
