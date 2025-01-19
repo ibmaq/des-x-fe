@@ -53,12 +53,14 @@ export const Navbar = () => {
           active ? "rounded-b-0 delay-75" : "rounded-b-9.6 delay-500"
         } relative`}
       >
-        <Image
-          src={"/images/logo.png"}
-          alt="des-x-design-logo"
-          width={195}
-          height={36}
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/images/logo.png"}
+            alt="des-x-design-logo"
+            width={195}
+            height={36}
+          />
+        </Link>
         <div className="flex gap-4 items-center">
           <p className="font-bebas text-cust-white text-2xl/none mt-1">Menu</p>
           <span
