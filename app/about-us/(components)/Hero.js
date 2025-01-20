@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div className="flex flex-col gap-6 lg:gap-16 items-center justify-center pt-16 lg:pt-41.5 pb-36 max-sm:px-4">
       <div className="text-center">
-        <h1 className="font-bebas text-white text-18.5 md:text-49 leading-0.8 md:-tracking-5.04 text-center">
+        <h1 className="font-bebas text-white text-18.5 md:text-41.5 leading-0.8 md:-tracking-5.04 text-center">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export const Hero = () => {
             }}
             className="inline-flex"
           >
-            Crafting
+            Designs that
           </motion.div>{" "}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -28,8 +28,9 @@ export const Hero = () => {
             }}
             className="inline-flex text-primary"
           >
-            Experiences
-          </motion.div>{" "}
+            Define
+          </motion.div>
+          <br />
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,9 +39,9 @@ export const Hero = () => {
               ease: "easeIn",
               delay: 0.6,
             }}
-            className="inline-flex"
+            className="inline-flex text-36.5"
           >
-            One pixel
+            Experience
           </motion.div>{" "}
           <motion.div
             initial={{ translateX: "-100%", width: 0 }}
@@ -62,20 +63,12 @@ export const Hero = () => {
               }}
               className="w-full h-full"
             >
-              {/* <Image
+              <Image
                 src={"/images/landing/span-mobile.png"}
                 alt="mobile-prototype-design"
                 width={232}
                 height={136}
-                className="w-full h-full object-cover border border-cust-white/30 rounded-md "
-              /> */}
-              <Image
-                src="/images/landing/span-mobile.png"
-                alt="mobile-prototype-design"
-                layout="responsive"
-                width={232}
-                height={136}
-                className="object-cover border border-cust-white/30 rounded-md"
+                className="w-full h-full object-cover border border-cust-white/30 rounded-md"
               />
             </motion.div>
           </motion.div>{" "}
@@ -87,18 +80,29 @@ export const Hero = () => {
               ease: "easeIn",
               delay: 0.6,
             }}
-            className="inline-flex"
+            className="inline-flex text-36.5"
           >
-            at a time
+            That
           </motion.div>{" "}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.3,
+              ease: "easeIn",
+              delay: 0.9,
+            }}
+            className="inline-flex text-primary text-36.5"
+          >
+            Inspires
+          </motion.div>
         </h1>
       </div>
       <div className="w-full flex flex-col gap-8 items-center max-w-182 mx-auto">
         <p className="uppercase text-cust-white text-center -tracking-0.19 text-base/none lg:text-xl/6 font-medium">
-          Where creativity meets strategy. We don’t just design—we craft
-          experiences that captivate your audience, connect with their needs,
-          and drive results that matter. Bold, innovative, and tailored to your
-          vision—we’re here to turn ideas into impact.
+          At Des-X Designs, we craft solutions that go beyond
+          aesthetics—delivering meaningful experiences that drive impact,
+          connect users, and elevate brands.
         </p>
         <Button text={"start a project"} icon={"plus"} theme={"primary"} />
       </div>

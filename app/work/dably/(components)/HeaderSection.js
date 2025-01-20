@@ -12,7 +12,9 @@ export default function HeaderSection({ children,heading }) {
             {heading}
           </h3>
         </div>
+
         <p className="font-medium text-xl/6 -tracking-0.19 text-gray-200 text-center ">
+        
           Where creativity meets strategy. We don’t just design—we craft
           experiences that captivate your audience, connect with their needs,
           and drive results that matter. Bold, innovative, and tailored to your
