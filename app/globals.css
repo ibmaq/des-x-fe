@@ -182,3 +182,22 @@ body {
     font-size: 25vw;
   }
 }
+.custom-height {
+  height: 150px;
+}
+@media (min-width: 545px) and (max-width: 768px) {
+  .custom-height {
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .custom-height {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-height {
+    height: 366px;
+  }
+}
