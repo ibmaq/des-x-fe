@@ -72,6 +72,7 @@ export default {
       },
       width: {
         216: "864px",
+        61: "244px",
       },
       maxWidth: {
         105.5: "422px",
@@ -103,6 +104,9 @@ export default {
       zIndex: {
         1: 1,
         2: 2,
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(90deg, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.6) 46.5%, #1A1A1A 100%)',
       },
     },
   },
