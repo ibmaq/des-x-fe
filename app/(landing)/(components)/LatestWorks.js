@@ -12,14 +12,14 @@ export const LatestWorks = () => {
       title: "Pendfunds",
       img: "/images/works/pendfunds.png",
       services: ["UX/UI Design", "Web Development"],
-      link: "/work/dably",
+      link: "/work/pendfunds",
     },
     {
       id: 1,
       title: "Dably",
       img: "/images/works/dably.png",
       services: ["UX/UI Design", "Web Development"],
-      link: "/work/pendfunds",
+      link: "/work/dably",
     },
     {
       id: 2,
