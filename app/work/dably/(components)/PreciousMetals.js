@@ -13,8 +13,8 @@ export default function PreciousMetals() {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="xl:px-20 px-4 md:px-8 lg:px-14 flex flex-col lg:gap-15 gap-8 md:gap-12">
-      <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-cust-white">
+    <div className="px-20 flex flex-col gap-15">
+      <h1 className="text-48 font-bebas -tracking-3.84 text-center leading-172 text-cust-white">
         Revolutionising Precious Metals
       </h1>
       <Animated
@@ -33,14 +33,22 @@ export default function PreciousMetals() {
           unoptimized
         />
       </Animated>
-      <Image
-        width={0}
-        height={0}
-        alt="precious-medals"
-        src={"/images/works/dably/precious-metals-img-2.webp"}
-        className="w-full"
-        unoptimized
-      />
+      <Animated
+        variants={leftImageVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <Image
+          width={0}
+          height={0}
+          alt="precious-medals"
+          src={"/images/works/dably/precious-metals-img-2.webp"}
+          className="w-full"
+          unoptimized
+        />
+      </Animated>
     </div>
   );
 }

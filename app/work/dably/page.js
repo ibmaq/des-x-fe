@@ -11,11 +11,9 @@ export default function Page() {
   return (
     <>
       <HeaderSection heading={"Dab:ly"}>
-        <span className="*:max-md:size-44">
-          <DablyIcon />
-        </span>
+        <DablyIcon />
       </HeaderSection>
-      <div className="flex flex-col lg:gap-15 gap-8 md:gap-12 lg:py-30 py-10 md:py-20">
+      <div className="flex flex-col gap-15 py-30">
         <PreciousMetals />
         <UserStories />
         <WireFrames />
