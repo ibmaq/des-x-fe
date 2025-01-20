@@ -19,11 +19,13 @@ export default function HeaderSection({ children,heading }) {
           vision—we’re here to turn ideas into impact.
         </p>
       </div>
+      
       <Button
         text={"Similar project? Get in touch"}
         icon={"plus"}
         theme={"primary"}
       />
+
     </div>
   );
 }
