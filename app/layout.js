@@ -19,7 +19,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${bebas.variable} antialiased cursor-default`}>
         <Navbar />
-        <main className="w-full max-w-screen-2xl mx-auto">{children}</main>
+        <main>{children}</main>
+        {/* <main className="w-full max-w-screen-2xl mx-auto">{children}</main> */}
         <Footer />
       </body>
     </html>
