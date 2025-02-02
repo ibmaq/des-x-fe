@@ -18,6 +18,7 @@ export default {
         "cust-white": "#FCFFF4", //cust is for custom
         "cust-black": "#1A1A1A",
         "cust-blue": "#7C70FF",
+        "cust-gray-1": "#1F2A37",
       },
       opacity: {
         8: "8%",
@@ -42,6 +43,7 @@ export default {
         49: "clamp(98px, 10vw + 18px, 196px)",
         82.5: "clamp(165px, 12vw + 20px, 330px)",
         366: "clamp(183px, 15vw + 33px, 366px)",
+        "hero-heading-md": "clamp(116px,   ,166px)",
       },
       letterSpacing: {
         0.19: "0.19200000166893005px",
@@ -69,6 +71,7 @@ export default {
         15: "60px",
         6.5: "26px",
         25: "100px",
+        30: "120px",
       },
       width: {
         216: "864px",

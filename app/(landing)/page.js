@@ -3,6 +3,8 @@ import { InfoSection } from "./(components)/InfoSection";
 import { LatestWorks } from "./(components)/LatestWorks";
 import { ShowReel } from "./(components)/ShowReel";
 import { Testmionials } from "./(components)/Testmionials";
+import { TrustedBy } from "./(components)/TrustedBy";
+import { WhatWeDo } from "./(components)/WhatWeDo";
 import { WhatWeOffer } from "./(components)/WhatWeOffer";
 
 export default function Home() {
@@ -11,9 +13,10 @@ export default function Home() {
     <>
       <Hero />
       <ShowReel />
-      <InfoSection />
-      <LatestWorks />
       <WhatWeOffer />
+      <LatestWorks />
+      <InfoSection />
+      <WhatWeDo />
       <Testmionials />
     </>
     // </div>
