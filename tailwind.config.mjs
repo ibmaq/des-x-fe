@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        "c-md": "720px",
         "2xl": "1440px",
         "3xl": "1920px",
       },
@@ -30,9 +31,10 @@ export default {
         4.8: "clamp(12px, 2vw + 8px, 19.2px)",
         6.5: "clamp(16px, 2vw + 10px, 26px)",
         10: "clamp(24px, 3vw + 12px, 40px)",
+        13.5: "54px",
         14: "clamp(32px, 4vw + 14px, 56px)",
         58: "clamp(40px, 5vw + 10px, 58px)",
-        15.5: "clamp(35px, 5vw + 12px, 62px)",
+        15.5: "62px",
         17: "clamp(38px, 5.5vw + 12px, 68px)",
         18.5: "clamp(42px, 6vw + 12px, 74px)",
         29: "clamp(60px, 7vw + 16px, 116px)",
@@ -55,6 +57,7 @@ export default {
         5.04: "5.04px",
         9.41: "9.407999992370605px",
         3.84: "3.84px",
+        1: "1px",
         1.15: "1.15px",
       },
       lineHeight: {
