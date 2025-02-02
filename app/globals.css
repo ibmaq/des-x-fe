@@ -74,6 +74,7 @@ body {
 .contained {
   width: 100%;
   max-width: 1600px;
+  margin-inline: auto;
 }
 
 .section-title {

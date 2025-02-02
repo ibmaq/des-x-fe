@@ -29,14 +29,16 @@ export default {
       },
       fontSize: {
         4.8: "clamp(12px, 2vw + 8px, 19.2px)",
-        6.5: "clamp(16px, 2vw + 10px, 26px)",
+        6.5: "26px",
         10: "clamp(24px, 3vw + 12px, 40px)",
+        10.5: "42px",
         13.5: "54px",
         14: "clamp(32px, 4vw + 14px, 56px)",
         58: "clamp(40px, 5vw + 10px, 58px)",
         15.5: "62px",
         17: "clamp(38px, 5.5vw + 12px, 68px)",
         18.5: "clamp(42px, 6vw + 12px, 74px)",
+        27.5: "110px",
         29: "clamp(60px, 7vw + 16px, 116px)",
         30: "clamp(64px, 7.5vw + 16px, 120px)",
         36.5: "clamp(70px, 8vw + 16px, 146px)",
@@ -59,12 +61,14 @@ export default {
         3.84: "3.84px",
         1: "1px",
         1.15: "1.15px",
+        2: "2px",
       },
       lineHeight: {
         0.8: "80%",
         0.9: "90%",
         0.92: "92%",
         1.2: "120%",
+        1.4: "140%",
         172: "172px",
         52: "52px",
       },
@@ -77,6 +81,7 @@ export default {
         30: "120px",
       },
       width: {
+        12.5: "50px",
         216: "864px",
         61: "244px",
       },
@@ -85,6 +90,9 @@ export default {
         182: "728px",
         647: "647px",
         216: "864px",
+      },
+      height: {
+        12.5: "50px",
       },
       maxHeight: {
         121.75: "487px",
@@ -99,8 +107,10 @@ export default {
         10: "10px",
       },
       padding: {
-        "section-2xl": "178px",
+        15: "60px",
         30: "120px",
+        35: "140px",
+        "section-2xl": "178px",
       },
       spacing: {
         46: "180px",

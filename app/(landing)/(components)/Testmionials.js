@@ -1,6 +1,5 @@
 import { Button } from "../../reusable-components/Button";
 
-
 export const Testmionials = () => {
   const reviewsData = [
     {
@@ -30,14 +29,14 @@ export const Testmionials = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-20 items-center justify-center py-30 max-sm:px-6">
-      <h2 className="font-bebas text-white text-17 lg:text-48 leading-0.9 -tracking-3.84 uppercase">
+    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 contained">
+      <h2 className="font-bebas text-white text-6xl c-md:text-27.5 lg:text-48 leading-none -tracking-2 uppercase text-left w-full">
         What People say
       </h2>
-      <div className="flex flex-col md:flex-row gap-12 lg:gap-8 lg:mx-20">
+      <div className="flex flex-col lg:flex-row gap-8">
         {reviewsData.map((review, reviewIndex) => (
           <div key={reviewIndex} className="flex flex-col gap-7">
-            <span className="size-9 lg:size-12">
+            <span className="w-12.5 h-12.5">
               <svg
                 viewBox="0 0 51 45"
                 fill="none"
@@ -50,21 +49,16 @@ export const Testmionials = () => {
                 />
               </svg>
             </span>
-            <p className="font-bebas text-white text-10 lg:text-14 leading-0.92 -tracking-1.15">
+            <p className="text-cust-white font-extrabold text-2xl/1.2 c-md:text-10.5/1.2 max-sm:uppercase italic">
               {review.content}
             </p>
-            <div className="flex lg:flex-col justify-between max-sm:items-end">
-              <p className="flex gap-2 font-medium text-6.5/snug text-gray-200 -tracking-0.19">
-                {review.title}
-              </p>
-              <p className="flex gap-2 font-medium text-base/snug text-gray-200 -tracking-0.19">
-                {review.designation}
-              </p>
+            <div className="flex flex-col text-gray-200 font-medium">
+              <p className="text-xl c-md:text-6.5/1.4">{review.title}</p>
+              <p className="text-sm c-md:text-base/1.4">{review.designation}</p>
             </div>
           </div>
         ))}
       </div>
-      <Button text={"start a project"} icon={"plus"} theme={"primary"} />
     </div>
   );
 };
