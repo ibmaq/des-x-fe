@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Portal() {
   return (
     <div className="flex flex-col lg:gap-15 md:gap-12 gap-8">
-      <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-cust-white">
+      <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-c-white">
         Web (User PortaL)
       </h1>
       <div className="flex flex-col gap-8 relative">
@@ -78,7 +78,7 @@ export default function Portal() {
         <div className="absolute bg-custom-gradient h-full w-61 left-0 top-0 rotate-180 max-lg:hidden" />
         <div className="absolute bg-custom-gradient h-full w-61 right-0 top-0 max-lg:hidden" />
       </div>
-      <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-cust-white">
+      <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-c-white">
         Web (Admin)
       </h1>
       <div className="flex flex-col gap-8 relative">

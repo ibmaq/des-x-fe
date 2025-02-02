@@ -104,7 +104,7 @@ export const WhatWeOffer = () => {
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="card flex flex-col gap-8 lg:p-10 rounded-xl border border-cust-white/30 bg-cust-black overflow-hidden"
+            className="card flex flex-col gap-8 lg:p-10 rounded-xl border border-c-white/30 bg-c-black overflow-hidden"
             style={{ transition: "width 0.3s ease" }}
           >
             <Image
@@ -112,7 +112,7 @@ export const WhatWeOffer = () => {
               alt="mobile-prototype-design"
               width={450}
               height={90}
-              className="border border-cust-white/30 rounded-md"
+              className="border border-c-white/30 rounded-md"
             />
             <div className="flex flex-col gap-3">
               <p className="text-15.5 lg:text-10/none text-white font-bebas">

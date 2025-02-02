@@ -79,7 +79,7 @@ export const WhatWeOffer = () => {
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="flex flex-col-reverse md:flex-row lg:gap-25 lg:p-10 rounded-xl border border-cust-white/30 bg-cust-black"
+            className="flex flex-col-reverse md:flex-row lg:gap-25 lg:p-10 rounded-xl border border-c-white/30 bg-c-black"
             ref={(el) => (cardsRef.current[workIndex] = el)}
             style={{ transition: "width 0.3s ease" }}
           >
@@ -103,7 +103,7 @@ export const WhatWeOffer = () => {
               alt="mobile-prototype-design"
               width={450}
               height={90}
-              className="border border-cust-white/30 rounded-md"
+              className="border border-c-white/30 rounded-md"
             />
           </div>
         ))}

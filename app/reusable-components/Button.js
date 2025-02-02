@@ -9,14 +9,14 @@ export const Button = ({
 }) => {
   return (
     <button
-      className={`uppercase flex w-full items-center justify-between rounded-2.5 backdrop-blur-10 p-5 border whitespace-nowrap ${
+      className={`uppercase flex items-center justify-between rounded-2.5 backdrop-blur-10 p-5 border whitespace-nowrap ${
         theme === "primary"
-          ? "bg-primary hover:bg-cust-blue border-cust-blue text-white"
+          ? "bg-primary hover:bg-c-blue border-c-blue text-white"
           : theme === "secondary"
-          ? "bg-cust-white hover:bg-cust-white/80 border-white "
+          ? "bg-c-white hover:bg-c-white/80 border-white "
           : "bg-transparent border-white text-white backdrop-blur-10"
-      } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 max-w-105.5 hover:scale-105 hover:rounded-12 transition-all duration-150 ease-linear ${
-        width || "w-full"
+      } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 hover:rounded-12 transition-all duration-150 ease-linear ${
+        width || "w-full max-w-105.5"
       }`}
     >
       {link ? <Link href={link}>{text}</Link> : text}

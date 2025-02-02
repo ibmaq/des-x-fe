@@ -52,7 +52,7 @@ export const LatestWorks = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="border border-cust-white/30 rounded-md overflow-hidden">
+              <div className="border border-c-white/30 rounded-md overflow-hidden">
                 <Image
                   src={work.img}
                   alt={work.title}
@@ -79,7 +79,7 @@ export const LatestWorks = () => {
               >
                 <div
                   className={
-                    "uppercase rounded-2.5 backdrop-blur-10 p-5 border text-cust-black bg-cust-white border-white font-extrabold text-base lg:text-xl leading-none -tracking-0.19"
+                    "uppercase rounded-2.5 backdrop-blur-10 p-5 border text-c-black bg-c-white border-white font-extrabold text-base lg:text-xl leading-none -tracking-0.19"
                   }
                 >
                   Coming Soon

@@ -15,7 +15,7 @@ export const ShowReel = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-cust-black/60 flex justify-center items-center">
+        <div className="absolute inset-0 bg-c-black/60 flex justify-center items-center">
           <Button
             text={"Watch the full showreel"}
             icon={"play"}

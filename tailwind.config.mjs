@@ -1,3 +1,8 @@
+// ====================//
+// IMPORTANT NOTE!     //
+// "c-" is for CUSTOM  //
+// ====================//
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -16,10 +21,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#5647FF",
-        "cust-white": "#FCFFF4", //cust is for custom
-        "cust-black": "#1A1A1A",
-        "cust-blue": "#7C70FF",
-        "cust-gray-1": "#1F2A37",
+        "c-white": "#FCFFF4",
+        "c-black": "#1A1A1A",
+        "c-blue": "#7C70FF",
+        "c-gray-1": "#1F2A37",
+        "c-hr": "#282729",
       },
       opacity: {
         8: "8%",
@@ -30,7 +36,7 @@ export default {
       fontSize: {
         4.8: "clamp(12px, 2vw + 8px, 19.2px)",
         6.5: "26px",
-        10: "clamp(24px, 3vw + 12px, 40px)",
+        10: "40px",
         10.5: "42px",
         13.5: "54px",
         14: "clamp(32px, 4vw + 14px, 56px)",

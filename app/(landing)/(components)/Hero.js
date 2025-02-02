@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className="w-full flex flex-col gap-6 lg:gap-12 items-center justify-center">
         <div className="flex flex-col gap-6 lg:gap-10 items-center justify-center pt-16 lg:pt-44 pb-36 max-sm:px-4">
           <div className="text-center flex flex-col gap-5">
-            <div className="pill-anim-border w-fit mx-auto text-white bg-cust-gray-1 pl-1 pr-2.5 py-1">
+            <div className="pill-anim-border w-fit mx-auto text-white bg-c-gray-1 pl-1 pr-2.5 py-1">
             <div className="pulse-shadow-wrapper"></div>
               <div className="relative z-1 text-sm/none font-medium flex gap-3">
                 <div className="pl-2 pr-2.5 py-1 rounded-full border border-gray-600 flex gap-1.5 items-center bg-gray-700">
@@ -108,7 +108,7 @@ export const Hero = () => {
                       maxWidth: "232px",
                       height: "auto",
                     }}
-                    className="w-full h-full object-cover border border-cust-white/30 rounded-md "
+                    className="w-full h-full object-cover border border-c-white/30 rounded-md "
                   />
                 </motion.div>
               </motion.div>{" "}
@@ -127,7 +127,7 @@ export const Hero = () => {
             </h1>
           </div>
           <div className="w-full flex flex-col gap-8 items-center max-w-182 mx-auto">
-            <p className="text-cust-white text-center -tracking-0.19 text-base/none lg:text-2xl/normal font-medium">
+            <p className="text-c-white text-center -tracking-0.19 text-base/none lg:text-2xl/normal font-medium">
               We help founders ship faster, convert better, and raise more.
             </p>
           </div>

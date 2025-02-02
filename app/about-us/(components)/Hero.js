@@ -70,7 +70,7 @@ export const Hero = () => {
                 alt="mobile-prototype-design"
                 width={232}
                 height={136}
-                className="w-full h-full object-cover border border-cust-white/30 rounded-md"
+                className="w-full h-full object-cover border border-c-white/30 rounded-md"
               />
             </motion.div>
           </motion.div>{" "}
@@ -101,7 +101,7 @@ export const Hero = () => {
         </h1>
       </div>
       <div className="w-full flex flex-col gap-8 items-center max-w-182 mx-auto">
-        <p className="uppercase text-cust-white text-center -tracking-0.19 text-base/none lg:text-xl/6 font-medium">
+        <p className="uppercase text-c-white text-center -tracking-0.19 text-base/none lg:text-xl/6 font-medium">
           Where creativity meets strategy. We don’t just design—we craft
           experiences that captivate your audience, connect with their needs,
           and drive results that matter. Bold, innovative, and tailored to your

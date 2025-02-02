@@ -49,7 +49,7 @@ export const Testmionials = () => {
                 />
               </svg>
             </span>
-            <p className="text-cust-white font-extrabold text-2xl/1.2 c-md:text-10.5/1.2 max-sm:uppercase italic">
+            <p className="text-c-white font-extrabold text-2xl/1.2 c-md:text-10.5/1.2 max-sm:uppercase italic">
               {review.content}
             </p>
             <div className="flex flex-col text-gray-200 font-medium">

@@ -1,6 +1,7 @@
 import { Hero } from "./(components)/Hero";
 import { InfoSection } from "./(components)/InfoSection";
 import { LatestWorks } from "./(components)/LatestWorks";
+import { Packages } from "./(components)/Packages";
 import { ShowReel } from "./(components)/ShowReel";
 import { Testmionials } from "./(components)/Testmionials";
 import { TrustedBy } from "./(components)/TrustedBy";
@@ -17,6 +18,7 @@ export default function Home() {
       <LatestWorks />
       <InfoSection />
       <WhatWeDo />
+      <Packages />
       <Testmionials />
     </>
     // </div>
