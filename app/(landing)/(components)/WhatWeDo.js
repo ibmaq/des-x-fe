@@ -9,29 +9,29 @@ export const WhatWeDo = () => {
       id: 0,
       title: "WEB App DESIGN",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "From dashboards to complex workflows, we design intuitive and scalable web applications that deliver a seamless user experience across all devices.",
+      img: "/images/what-we-do.png",
     },
     {
       id: 1,
       title: "Mobile App Design",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "We create sleek, user-friendly mobile app designs that engage users and bring your ideas to life on both iOS and Android platforms.",
+      img: "/images/what-we-do.png",
     },
     {
       id: 2,
       title: "LANDING PAGE",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "First impressions matter. Our landing pages are crafted to captivate visitors, communicate your value, and drive conversions.",
+      img: "/images/what-we-do.png",
     },
     {
       id: 3,
       title: "Pitch Deck",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "Need to make an impact? We design visually stunning and persuasive pitch decks that help you communicate your ideas effectively and win over stakeholders",
+      img: "/images/what-we-do.png",
     },
   ];
 
@@ -71,39 +71,45 @@ export const WhatWeDo = () => {
   // card.style.marginRight = `${scrollY * 0.2}px`;
 
   return (
-    <div className="flex flex-col gap-20 items-center justify-center lg:py-30 max-sm:px-6">
-      <h2 className="font-bebas text-white text-17 lg:text-48 leading-0.9 -tracking-3.84 uppercase">
-        What we Offer
-      </h2>
-      <div className="flex flex-col gap-20 lg:mx-12" ref={sectionRef}>
+    <div className="flex flex-col gap-20 items-center justify-center px-4 c-md:px-8 py-35">
+      <div className="flex flex-col gap-3 items-center text-center">
+        <h2 className="section-title">What we do</h2>
+        <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">
+          Today's users judge fast and scroll faster. We create{" "}
+          <br className="max-sm:hidden" /> designs that stop them in their
+          tracks through...
+        </p>
+      </div>
+      <div className="flex flex-col gap-10 lg:mx-12" ref={sectionRef}>
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="flex flex-col-reverse md:flex-row lg:gap-25 lg:p-10 rounded-xl border border-c-white/30 bg-c-black"
+            className="flex flex-col-reverse lg:flex-row gap-10 p-5 2xl:p-10 border border-c-white/30 rounded-xl bg-c-black-2"
             ref={(el) => (cardsRef.current[workIndex] = el)}
             style={{ transition: "width 0.3s ease" }}
           >
-            <div className="flex flex-col gap-8 w-full max-sm:p-4">
+            <div className="flex flex-col gap-8 lg:gap-48 2xl:justify-between">
               <div className="flex flex-col">
-                <p className="text-15.5 lg:text-30/1.2 text-white font-bebas -tracking-2.88">
+                <p className="text-13.5/none c-md:text-20/none 2xl:text-30/none text-c-white font-bebas -tracking-2">
                   {work.title}
                 </p>
-                <p className="flex gap-2 text-base/snug text-gray-400 -tracking-0.19">
+                <p className="flex gap-2 text-sm/1.4 c-md:text-xl text-gray-400 capitalize">
                   {work.content}
                 </p>
               </div>
               <Button
-                text={"start a project"}
-                icon={"plus"}
+                text={"Book an Intro Call"}
+                icon={"rightArrow"}
                 theme={"primary"}
+                width={"w-full lg:max-w-105.5"}
               />
             </div>
             <Image
               src={work.img}
               alt="mobile-prototype-design"
-              width={450}
-              height={90}
-              className="border border-c-white/30 rounded-md"
+              width={616}
+              height={333}
+              className="rounded-1 w-full lg:max-w-113.5 lg:h-83.25"
             />
           </div>
         ))}
