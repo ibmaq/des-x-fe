@@ -3,7 +3,7 @@ import { TrustedBy } from "./TrustedBy";
 
 export const ShowReel = () => {
   return (
-    <div className="flex flex-col gap-30 items-center justify-center lg:py-30 max-sm:px-4">
+    <div className="flex flex-col gap-30 items-center justify-center py-15 lg:py-30 max-sm:px-4">
       <TrustedBy />
 
       <div className="contained object-contain relative">

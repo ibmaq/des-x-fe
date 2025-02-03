@@ -243,42 +243,67 @@ body {
 /* Landing Page - Hero Styling */
 
 .hero-container {
-  height: 949px;
   width: 100%;
-  max-width: calc(100vw - 120px);
   border-radius: 20px;
   margin-inline: auto;
   overflow: hidden;
   position: relative;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .hero-container {
+    height: 949px;
     max-width: 1800px;
+    margin-inline: auto;
   }
 }
 
 .hero-bg-1,
 .hero-bg-2 {
   position: absolute;
-  height: 1702px;
-  width: 2297px;
+  height: 1202px;
+  width: 100vw;
   left: 0;
   right: 0;
-  margin: 0 auto 0 -200px;
+  margin: 0 auto 0 0;
   background-repeat: no-repeat;
   background-position: center center;
-  animation: gradientPulse 18s infinite alternate ease-out;
+  animation: gradientPulse 10s infinite alternate ease-in-out;
   z-index: -1;
 }
+@media (min-width: 720px) {
+  .hero-bg-1,
+  .hero-bg-2 {
+    height: 1602px;
+    width: 120vw;
+    margin: 0 auto 0 -90px;
+    animation: gradientPulse 18s infinite alternate ease-in-out;
+  }
+}
+@media (min-width: 1920px) {
+  .hero-bg-1,
+  .hero-bg-2 {
+    height: 1702px;
+    width: 2297px;
+    margin: 0 auto 0 -200px;
+    animation: gradientPulse 18s infinite alternate ease-in-out;
+  }
+}
 .hero-bg-1 {
-  bottom: -45px;
+  bottom: 0px;
   background-image: url("/images/landing/hero_bg_grad_2.png");
 }
-
 .hero-bg-2 {
-  bottom: -232px;
+  bottom: -187px;
   background-image: url("/images/landing/hero_bg_grad_1.png");
+}
+@media (min-width: 460px) {
+  .hero-bg-1 {
+    bottom: -45px;
+  }
+  .hero-bg-2 {
+    bottom: -232px;
+  }
 }
 
 @keyframes gradientPulse {

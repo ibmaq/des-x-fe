@@ -44,6 +44,7 @@ export default {
         14: "56px",
         58: "58px",
         15.5: "62px",
+        16.5: "66px",
         17: "68px",
         18.5: "74px",
         20: "80px",
@@ -72,6 +73,8 @@ export default {
         1: "1px",
         1.15: "1.15px",
         2: "2px",
+        3: "3px",
+        5: "5px",
       },
       lineHeight: {
         0.8: "80%",
@@ -89,6 +92,7 @@ export default {
         15: "60px",
         6.5: "26px",
         25: "100px",
+        28.5: "114px",
         30: "120px",
       },
       width: {
@@ -107,6 +111,7 @@ export default {
       },
       height: {
         12.5: "50px",
+        22: "88px",
         22.5: "90px",
         83.25: "333px",
         107.5: "430px",
@@ -131,6 +136,7 @@ export default {
         30: "120px",
         33.75: "135px",
         35: "140px",
+        42.25: "169px",
         "section-2xl": "178px",
       },
       spacing: {

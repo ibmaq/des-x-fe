@@ -22,7 +22,7 @@ export const TrustedBy = () => {
 
               return (
                 <li
-                  className="px-5 py-3 w-screen max-w-[522px] object-contain flex justify-center items-center border border-gray-700 relative"
+                  className="max-sm:h-22 px-5 py-3 w-screen max-w-[285px] c-md:max-w-[438px] 2xl:max-w-[522px] object-contain flex justify-center items-center border border-gray-700 relative"
                   key={idx}
                 >
                   {/* SVG Corners */}
@@ -55,7 +55,7 @@ export const TrustedBy = () => {
                     height={0}
                     src={`/images/works/logos-small/${logo}.png`}
                     alt={`logo-for-${logo} marquee__item`}
-                    className="grayscale"
+                    className="grayscale max-sm:w-12.5"
                     unoptimized
                   />
                 </li>
@@ -68,7 +68,7 @@ export const TrustedBy = () => {
 
               return (
                 <li
-                  className="px-5 py-3 w-screen max-w-[522px] object-contain flex justify-center items-center border border-gray-700 relative"
+                  className="px-5 py-3 w-screen max-w-[285px] c-md:max-w-[438px] 2xl:max-w-[522px] object-contain flex justify-center items-center border border-gray-700 relative"
                   key={idx}
                 >
                   {/* SVG Corners */}
