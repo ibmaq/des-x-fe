@@ -7,36 +7,50 @@ export const WhatWeOffer = () => {
   const servicesData = [
     {
       id: 0,
-      title: "WEB App DESIGN",
+      title: "Designs That Drive Results",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "We focus on creating user-friendly designs that don’t just look good—they solve real problems and achieve your business goal",
+      img: "/images/services/1.png",
     },
     {
       id: 1,
-      title: "Mobile App Design",
+      title: "Tailored Solutions, Every Time",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "No templates, no shortcuts. Every design we create is customized to fit your unique brand and audience.",
+      img: "/images/services/2.png",
     },
     {
       id: 2,
-      title: "LANDING PAGE",
+      title: "Collaboration That Counts",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "We work with you every step of the way, combining your vision with our expertise for designs that truly stand out.",
+      img: "/images/services/3.png",
     },
     {
       id: 3,
-      title: "Pitch Deck",
+      title: "Experience Meets Innovation",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Faucibus sed enim donec in nec integer. Quisque ut etiam fringilla sed viverra viverra. Tempus in velit eu cras pellentesque. Viverra mauris gravida donec eu metus rhoncus adipiscing amet et.",
-      img: "/images/works/pendfunds.png",
+        "With years of expertise and a pulse on the latest trends, we craft designs that are both timeless and cutting-edge.",
+      img: "/images/services/2.png",
+    },
+    {
+      id: 3,
+      title: "Scalable Design Systems",
+      content:
+        "We build systems that grow with your business, ensuring consistency and adaptability across platforms.",
+      img: "/images/services/3.png",
+    },
+    {
+      id: 3,
+      title: "Seamless Communication",
+      content:
+        "We prioritize transparency and clarity, keeping you informed and involved throughout the entire design process.",
+      img: "/images/services/1.png",
     },
   ];
 
   useEffect(() => {
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".card-wrapper");
 
     cards.forEach((card) => {
       const glow = document.createElement("div");
@@ -51,7 +65,6 @@ export const WhatWeOffer = () => {
         const xPercent = (x / width) * 100;
         const yPercent = (y / height) * 100;
 
-        // GSAP animation for 3D effect (card movement)
         gsap.to(card, {
           duration: 0.1,
           rotationY: (xPercent - 50) * 0.2,
@@ -59,12 +72,11 @@ export const WhatWeOffer = () => {
           ease: "power2.out",
         });
 
-        // GSAP animation to move the glow with the cursor
         gsap.to(glow, {
           duration: 0.1,
-          x: x, // Position the glow at the cursor position
-          y: y, // Position the glow at the cursor position
-          opacity: 1, // Make glow visible when hovering
+          x: x,
+          y: y,
+          opacity: 1,
           ease: "power2.out",
         });
       });
@@ -76,51 +88,51 @@ export const WhatWeOffer = () => {
           duration: 0.3,
         });
 
-        // Fade out glow when mouse leaves the card
         gsap.to(glow, {
           opacity: 0,
           duration: 0.3,
+          ease: "power2.out",
         });
       });
 
-      // Initially hide the glow
       gsap.set(glow, { opacity: 0 });
     });
   }, []);
 
   return (
-    <div className="what-we-offer flex flex-col gap-20 items-center justify-center lg:py-30 max-sm:px-6">
+    <div className="services flex flex-col gap-20 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-35">
       <div className="flex flex-col gap-3 items-center text-center">
         <h2 className="section-title">
           How we Make sure you receive the Best!
         </h2>
-        <p className="text-gray-300 text-xl/normal font-medium capitalize">
-          Today's users judge fast and scroll faster. We create <br />
-          designs that stop them in their tracks through...
+        <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">
+          Today's users judge fast and scroll faster. We create{" "}
+          <br className="max-sm:hidden" /> designs that stop them in their
+          tracks through...
         </p>
       </div>
       {/* <div className="flex flex-col gap-20 lg:mx-12"> */}
-      <div className="container grid grid-cols-3 gap-5">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 contained">
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="card flex flex-col gap-8 lg:p-10 rounded-xl border border-c-white/30 bg-c-black overflow-hidden"
-            style={{ transition: "width 0.3s ease" }}
+            className="card-wrapper overflow-hidden rounded-xl"
           >
-            <Image
-              src={work.img}
-              alt="mobile-prototype-design"
-              width={450}
-              height={90}
-              className="border border-c-white/30 rounded-md"
-            />
-            <div className="flex flex-col gap-3">
-              <p className="text-15.5 lg:text-10/none text-white font-bebas">
-                {work.title}
-              </p>
-              <p className="flex gap-2 text-base/snug text-gray-400 -tracking-0.19">
-                {work.content}
-              </p>
+            <div className="card flex flex-col gap-8 p-5">
+              <Image
+                src={work.img}
+                alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
+                width={162}
+                height={152}
+              />
+              <div className="flex flex-col gap-3">
+                <p className="text-10/none text-white font-bebas">
+                  {work.title}
+                </p>
+                <p className="flex gap-2 text-base/snug text-gray-400 capitalize">
+                  {work.content}
+                </p>
+              </div>
             </div>
           </div>
         ))}

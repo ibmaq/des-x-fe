@@ -395,7 +395,7 @@ body {
 
 /* What We Offer Section Classes */
 
-.what-we-offer {
+.services {
   border-width: 1px 0px 1px 0px;
   border-style: solid;
   border-color: #ffffff26;
@@ -404,6 +404,43 @@ body {
     rgba(86, 71, 255, 0.2),
     rgba(15, 15, 15, 0.2)
   );
+}
+
+.services .card-wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 1px;
+}
+.services .card {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+.services .card:not(:hover) {
+  z-index: 1;
+  border-radius: 12px;
+  background-color: #0f0f0f;
+}
+.services .card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: 12px;
+  background: linear-gradient(
+    290.74deg,
+    #171717 0%,
+    rgba(124, 147, 183, 0.2) 100%
+  );
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+}
+.services .card:hover::before {
+  content: none;
 }
 
 .glowing-orb {
