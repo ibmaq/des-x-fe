@@ -1,9 +1,12 @@
 import { Button } from "../../reusable-components/Button";
+import { TrustedBy } from "./TrustedBy";
 
 export const ShowReel = () => {
   return (
-    <div className="flex items-center justify-center lg:py-30 max-sm:px-4">
-      <div className="w-full max-w-6xl object-contain relative">
+    <div className="flex flex-col gap-30 items-center justify-center py-15 lg:py-30 max-sm:px-4">
+      <TrustedBy />
+
+      <div className="contained object-contain relative">
         {/* <video autoPlay loop muted className="w-full h-full object-contain"> */}
         <video autoPlay loop muted className="mx-auto">
           <source
@@ -12,7 +15,7 @@ export const ShowReel = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-cust-black/60 flex justify-center items-center">
+        <div className="absolute inset-0 bg-c-black/60 flex justify-center items-center">
           <Button
             text={"Watch the full showreel"}
             icon={"play"}

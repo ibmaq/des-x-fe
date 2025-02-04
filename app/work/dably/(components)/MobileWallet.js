@@ -12,7 +12,7 @@ export default function MobileWallet() {
         unoptimized
       />
       <div className="flex flex-col lg:gap-15 md:gap-12 gap-8">
-        <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-cust-white">
+        <h1 className="xl:text-48/172 text-17/none md:text-29 font-bebas md:-tracking-3.84 -tracking-2.88 text-center text-c-white">
           Mobile Wallet
         </h1>
         <section className="enable-animation-mobile relative">

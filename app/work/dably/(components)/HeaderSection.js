@@ -8,7 +8,7 @@ export default function HeaderSection({ children, heading }) {
         <div className="flex flex-col gap-3 justify-center items-center">
           {children}
           {/* <DablyIcon /> */}
-          <h3 className="md:text-49/none text-30/none -tracking-5.04 text-cust-white font-bebas">
+          <h3 className="md:text-49/none text-30/none -tracking-5.04 text-c-white font-bebas">
             {heading}
           </h3>
         </div>
