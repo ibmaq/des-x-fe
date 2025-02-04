@@ -59,7 +59,7 @@ html {
 }
 
 :root {
-  --background: #0F0F0F;
+  --background: #0f0f0f;
   --foreground: #171717;
 }
 
@@ -502,9 +502,8 @@ body {
     transition: background-color 600ms ease-in-out,
       box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease-in-out;
   }
-
   .bg-package-card.recommended:hover {
-    box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
+  box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
     border: none;
   }
   .package-card-grid-bg {
@@ -520,7 +519,7 @@ body {
     transform: translateY(100%);
   }
   .bg-package-card.recommended:hover .package-card-grid-bg {
-    transform: translateY(0); /* Slide up to 0 */
+    transform: translateY(0);
   }
 
   .bg-package-card.recommended::before,
