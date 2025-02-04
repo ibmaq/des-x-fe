@@ -1,40 +1,10 @@
 "use client";
 import { Button } from "@/app/reusable-components/Button";
+import { packagesData } from "@/public/utils/data";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 
 export const Packages = () => {
-  const packagesData = [
-    {
-      id: 0,
-      title: "Design + Dev Retainers",
-      desc: "For Companies looking to get on-going support. Starting at $3k/Month",
-      recommended: true,
-      offered: [
-        "Daily design support with dedicated designers",
-        "Predictable costs - no surprise bills, scale up or down anytime",
-        "Quick turnarounds keep your project moving fast",
-        "Seamless collaboration with Slack",
-        "Assign as many stakeholders as you need",
-        "Pause and resume work for up to 30 days",
-      ],
-    },
-    {
-      id: 1,
-      title: "One Time Project",
-      desc: "Clear Scope, Timeline & Deliverables. Starting at $2K",
-      recommended: false,
-      offered: [
-        "50% upfront, 25% on design approval, 25% on delivery",
-        "Clearly defined scope with a detailed SOW documen",
-        "50% upfront, 25% on design approval, 25% on delivery",
-        "Bulletproof milestone-based delivery (4-12 weeks)",
-        "Dedicated design (and/or development) team",
-        "Industry-specific expertise (SaaS, Tech)",
-      ],
-    },
-  ];
-
   useEffect(() => {
     const cards = document.querySelectorAll(".card");
 
