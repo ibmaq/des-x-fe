@@ -1,4 +1,4 @@
-export const servicesData = [
+export const designExcellenceData = [
   {
     id: 0,
     title: "Designs That Drive Results",
@@ -83,5 +83,94 @@ export const worksData = [
     img: "/images/works/rentto.png",
     services: ["UX/UI Re-Design"],
     link: "coming-soon",
+  },
+];
+
+export const reviewsData = [
+  {
+    id: 0,
+    title: "John Doe",
+    designation: "Designation",
+    content:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+    img: "/images/works/pendfunds.png",
+  },
+  {
+    id: 1,
+    title: "John Doe",
+    designation: "Designation",
+    content:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+    img: "/images/works/pendfunds.png",
+  },
+  {
+    id: 2,
+    title: "John Doe",
+    designation: "Designation",
+    content:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
+    img: "/images/works/pendfunds.png",
+  },
+];
+
+export const servicesData = [
+  {
+    id: 0,
+    title: "WEB App DESIGN",
+    content:
+      "From dashboards to complex workflows, we design intuitive and scalable web applications that deliver a seamless user experience across all devices.",
+    img: "/images/what-we-do.png",
+  },
+  {
+    id: 1,
+    title: "Mobile App Design",
+    content:
+      "We create sleek, user-friendly mobile app designs that engage users and bring your ideas to life on both iOS and Android platforms.",
+    img: "/images/what-we-do.png",
+  },
+  {
+    id: 2,
+    title: "LANDING PAGE",
+    content:
+      "First impressions matter. Our landing pages are crafted to captivate visitors, communicate your value, and drive conversions.",
+    img: "/images/what-we-do.png",
+  },
+  {
+    id: 3,
+    title: "Pitch Deck",
+    content:
+      "Need to make an impact? We design visually stunning and persuasive pitch decks that help you communicate your ideas effectively and win over stakeholders",
+    img: "/images/what-we-do.png",
+  },
+];
+
+export const packagesData = [
+  {
+    id: 0,
+    title: "Design + Dev Retainers",
+    desc: "For Companies looking to get on-going support. Starting at $3k/Month",
+    recommended: true,
+    offered: [
+      "Daily design support with dedicated designers",
+      "Predictable costs - no surprise bills, scale up or down anytime",
+      "Quick turnarounds keep your project moving fast",
+      "Seamless collaboration with Slack",
+      "Assign as many stakeholders as you need",
+      "Pause and resume work for up to 30 days",
+    ],
+  },
+  {
+    id: 1,
+    title: "One Time Project",
+    desc: "Clear Scope, Timeline & Deliverables. Starting at $2K",
+    recommended: false,
+    offered: [
+      "50% upfront, 25% on design approval, 25% on delivery",
+      "Clearly defined scope with a detailed SOW documen",
+      "50% upfront, 25% on design approval, 25% on delivery",
+      "Bulletproof milestone-based delivery (4-12 weeks)",
+      "Dedicated design (and/or development) team",
+      "Industry-specific expertise (SaaS, Tech)",
+    ],
   },
 ];

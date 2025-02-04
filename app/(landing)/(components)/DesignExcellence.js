@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect } from "react";
-import { servicesData } from "@/public/utils/data";
+import { designExcellenceData } from "@/public/utils/data";
 
-export const WhatWeOffer = () => {
+export const DesignExcellence = () => {
   useEffect(() => {
     const cards = document.querySelectorAll(".services-card-wrapper");
     cards.forEach((card) => {
@@ -68,7 +68,7 @@ export const WhatWeOffer = () => {
       </div>
       {/* <div className="flex flex-col gap-20 lg:mx-12"> */}
       <div className="container grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 contained">
-        {servicesData.map((work, workIndex) => (
+        {designExcellenceData.map((work, workIndex) => (
           <div
             key={workIndex}
             className="services-card-wrapper overflow-hidden rounded-xl"

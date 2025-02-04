@@ -2,8 +2,6 @@
 import Image from "next/image";
 import { Button } from "../../reusable-components/Button";
 import { motion } from "motion/react";
-import spanMobile from "@/public/images/landing/span-mobile.png";
-// import from "/images/landing/span-mobile.png"
 export const Hero = () => {
   return (
     <div className="flex flex-col gap-6 lg:gap-16 items-center justify-center pt-16 lg:pt-44 pb-36 max-sm:px-4">

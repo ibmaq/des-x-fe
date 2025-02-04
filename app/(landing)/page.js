@@ -1,12 +1,11 @@
+import { Packages } from "../reusable-components/Packages";
+import { ServicesOffered } from "../reusable-components/ServicesOffered";
+import { Testmionials } from "../reusable-components/Testmionials";
 import { Hero } from "./(components)/Hero";
 import { InfoSection } from "./(components)/InfoSection";
 import { LatestWorks } from "./(components)/LatestWorks";
-import { Packages } from "./(components)/Packages";
 import { ShowReel } from "./(components)/ShowReel";
-import { Testmionials } from "./(components)/Testmionials";
-import { TrustedBy } from "./(components)/TrustedBy";
-import { WhatWeDo } from "./(components)/WhatWeDo";
-import { WhatWeOffer } from "./(components)/WhatWeOffer";
+import { DesignExcellence } from "./(components)/DesignExcellence";
 
 export default function Home() {
   return (
@@ -14,10 +13,10 @@ export default function Home() {
     <>
       <Hero />
       <ShowReel />
-      <WhatWeOffer />
+      <DesignExcellence />
       <LatestWorks />
       <InfoSection />
-      <WhatWeDo />
+      <ServicesOffered />
       <Packages />
       <Testmionials />
     </>

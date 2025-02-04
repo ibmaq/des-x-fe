@@ -1,39 +1,11 @@
 "use client";
 import Image from "next/image";
-import { Button } from "../../reusable-components/Button";
+import { Button } from "./Button";
 import { useEffect, useRef } from "react";
+import { servicesData } from "@/public/utils/data";
 
-export const WhatWeDo = () => {
-  const servicesData = [
-    {
-      id: 0,
-      title: "WEB App DESIGN",
-      content:
-        "From dashboards to complex workflows, we design intuitive and scalable web applications that deliver a seamless user experience across all devices.",
-      img: "/images/what-we-do.png",
-    },
-    {
-      id: 1,
-      title: "Mobile App Design",
-      content:
-        "We create sleek, user-friendly mobile app designs that engage users and bring your ideas to life on both iOS and Android platforms.",
-      img: "/images/what-we-do.png",
-    },
-    {
-      id: 2,
-      title: "LANDING PAGE",
-      content:
-        "First impressions matter. Our landing pages are crafted to captivate visitors, communicate your value, and drive conversions.",
-      img: "/images/what-we-do.png",
-    },
-    {
-      id: 3,
-      title: "Pitch Deck",
-      content:
-        "Need to make an impact? We design visually stunning and persuasive pitch decks that help you communicate your ideas effectively and win over stakeholders",
-      img: "/images/what-we-do.png",
-    },
-  ];
+export const ServicesOffered = () => {
+
 
   const cardsRef = useRef([]);
   const sectionRef = useRef(null);
@@ -114,7 +86,7 @@ export const WhatWeDo = () => {
           </div>
         ))}
       </div>
-      <Button text={"see all services"} icon={"arrow"} theme={"secondary"} />
+      {/* <Button text={"see all services"} icon={"arrow"} theme={"secondary"} /> */}
     </div>
   );
 };

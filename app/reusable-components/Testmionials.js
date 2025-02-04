@@ -1,32 +1,7 @@
-import { Button } from "../../reusable-components/Button";
+import { reviewsData } from "@/public/utils/data";
 
 export const Testmionials = () => {
-  const reviewsData = [
-    {
-      id: 0,
-      title: "John Doe",
-      designation: "Designation",
-      content:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-      img: "/images/works/pendfunds.png",
-    },
-    {
-      id: 1,
-      title: "John Doe",
-      designation: "Designation",
-      content:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-      img: "/images/works/pendfunds.png",
-    },
-    {
-      id: 2,
-      title: "John Doe",
-      designation: "Designation",
-      content:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-      img: "/images/works/pendfunds.png",
-    },
-  ];
+
 
   return (
     <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 contained">
