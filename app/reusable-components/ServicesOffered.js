@@ -56,7 +56,7 @@ export const ServicesOffered = () => {
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="flex flex-col-reverse lg:flex-row gap-10 p-5 2xl:p-10 border border-c-white/30 rounded-xl bg-c-black-2"
+            className="flex flex-col-reverse lg:flex-row lg:justify-between gap-10 p-5 2xl:p-10 border border-c-white/30 rounded-xl bg-c-black-2"
             ref={(el) => (cardsRef.current[workIndex] = el)}
             style={{ transition: "width 0.3s ease" }}
           >
