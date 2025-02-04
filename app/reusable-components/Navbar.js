@@ -54,7 +54,7 @@ export const Navbar = () => {
           : isSticky || lastScrollTop === 0
           ? "top-6 lg:top-10 translate-y-0"
           : "top-0 -translate-y-full"
-      } sticky md:w-216 max-w-216 mx-6 lg:mx-auto z-50 transition-all ease-linear duration-300`}
+      } sticky max-w-216 mx-6 lg:mx-auto z-50 transition-all ease-linear duration-300`}
     >
       <div
         className={`flex justify-between items-center px-6 py-5 border border-c-white/30 backdrop-blur-2xl bg-c-white/8 rounded-t-9.6 z-10 transition-all ease-in-out ${
@@ -70,7 +70,7 @@ export const Navbar = () => {
           />
         </Link>
         <div className="flex gap-4 items-center">
-          <p className="font-bebas text-c-white text-2xl/none mt-1">Menu</p>
+          {/* <p className="font-bebas text-c-white text-2xl/none mt-1">Menu</p> */}
           <span
             className={`menu-burger-icon size-10 ${active ? "active" : ""}`}
             onClick={() => handleActiveState()}

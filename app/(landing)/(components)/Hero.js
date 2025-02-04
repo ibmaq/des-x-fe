@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className="flex flex-col gap-28.5">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
-              <div className="pill-anim-border w-fit mx-auto text-white bg-c-gray-1 pl-1 pr-2.5 py-1">
+              <div className="pill-anim-border w-fit mx-auto text-white bg-c-gray-1 pl-1 pr-2.5 py-1 cursor-pointer">
                 <div className="pulse-shadow-wrapper"></div>
                 <div className="relative z-1 text-sm/none font-medium flex gap-3">
                   <div className="pl-2 pr-2.5 py-1 rounded-full border border-gray-600 flex gap-1.5 items-center bg-gray-700">

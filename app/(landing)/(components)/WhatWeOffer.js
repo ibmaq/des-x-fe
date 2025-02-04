@@ -2,56 +2,11 @@
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import { servicesData } from "@/public/utils/data";
 
 export const WhatWeOffer = () => {
-  const servicesData = [
-    {
-      id: 0,
-      title: "Designs That Drive Results",
-      content:
-        "We focus on creating user-friendly designs that don’t just look good—they solve real problems and achieve your business goal",
-      img: "/images/services/1.png",
-    },
-    {
-      id: 1,
-      title: "Tailored Solutions, Every Time",
-      content:
-        "No templates, no shortcuts. Every design we create is customized to fit your unique brand and audience.",
-      img: "/images/services/2.png",
-    },
-    {
-      id: 2,
-      title: "Collaboration That Counts",
-      content:
-        "We work with you every step of the way, combining your vision with our expertise for designs that truly stand out.",
-      img: "/images/services/3.png",
-    },
-    {
-      id: 3,
-      title: "Experience Meets Innovation",
-      content:
-        "With years of expertise and a pulse on the latest trends, we craft designs that are both timeless and cutting-edge.",
-      img: "/images/services/2.png",
-    },
-    {
-      id: 3,
-      title: "Scalable Design Systems",
-      content:
-        "We build systems that grow with your business, ensuring consistency and adaptability across platforms.",
-      img: "/images/services/3.png",
-    },
-    {
-      id: 3,
-      title: "Seamless Communication",
-      content:
-        "We prioritize transparency and clarity, keeping you informed and involved throughout the entire design process.",
-      img: "/images/services/1.png",
-    },
-  ];
-
   useEffect(() => {
-    const cards = document.querySelectorAll(".card-wrapper");
-
+    const cards = document.querySelectorAll(".services-card-wrapper");
     cards.forEach((card) => {
       const glow = document.createElement("div");
       glow.classList.add("glowing-orb");
@@ -116,9 +71,9 @@ export const WhatWeOffer = () => {
         {servicesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className="card-wrapper overflow-hidden rounded-xl"
+            className="services-card-wrapper overflow-hidden rounded-xl"
           >
-            <div className="card flex flex-col gap-8 p-5">
+            <div className="services-card flex flex-col gap-8 p-5">
               <Image
                 src={work.img}
                 alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"

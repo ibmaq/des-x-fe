@@ -280,7 +280,7 @@ body {
     animation: gradientPulse 18s infinite alternate ease-in-out;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1440px) {
   .hero-bg-1,
   .hero-bg-2 {
     height: 1702px;
@@ -431,22 +431,22 @@ body {
   );
 }
 
-.services .card-wrapper {
+.services-card-wrapper {
   position: relative;
   border-radius: 12px;
   padding: 1px;
 }
-.services .card {
+.services-card {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
-.services .card:not(:hover) {
+.services-card:not(:hover) {
   z-index: 1;
   border-radius: 12px;
   background-color: #0f0f0f;
 }
-.services .card::before {
+.services-card::before {
   content: "";
   position: absolute;
   inset: -1px;
@@ -464,25 +464,8 @@ body {
   -webkit-mask-composite: destination-out;
   pointer-events: none;
 }
-.services .card:hover::before {
+.services-card:hover::before {
   content: none;
-}
-
-.glowing-orb {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 375px;
-  height: 375px;
-  background: #5647ff;
-  opacity: 30%;
-  filter: blur(250px);
-  /* background: radial-gradient(circle, rgba(86,71,255,0.8) 1%, rgba(0,0,0,0.1) 75%); */
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: -1; /* Ensures the glow stays beneath the content */
-  transition: opacity 0.3s ease; /* Smooth fade effect */
 }
 
 /* Packages Section Classes */
@@ -568,4 +551,60 @@ body {
   .bg-package-card.recommended:hover::after {
     opacity: 1;
   }
+}
+
+.latest-works-card-wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 1px;
+}
+
+.latest-works-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: var(
+    --border-gradient,
+    linear-gradient(90deg, rgba(86, 71, 255, 0.8), rgba(86, 71, 255, 0.2))
+  );
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Custom orbs */
+
+.glowing-orb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 375px;
+  background: #5647ff;
+  opacity: 30%;
+  filter: blur(250px);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.works-glowing-orb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 375px;
+  background: #5647ff;
+  filter: blur(250px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
 }
