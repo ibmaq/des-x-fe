@@ -1,25 +1,105 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../../reusable-components/Button";
 import { TrustedBy } from "./TrustedBy";
 
 export const ShowReel = () => {
-  return (
-    <div className="flex flex-col gap-30 items-center justify-center py-15 lg:py-30 max-sm:px-4">
-      <TrustedBy />
+  const videoRef = useRef(null);
+  const playerRef = useRef(null);
+  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(0);
+  const [showOverlay, setShowOverlay] = useState(true);
+  const overlayTimeout = useRef(null);
 
-      <div className="contained object-contain relative">
-        {/* <video autoPlay loop muted className="w-full h-full object-contain"> */}
-        <video autoPlay loop muted className="mx-auto">
-          <source
-            src="https://uploads-ssl.webflow.com/655b3d9644c731751d03fd3a/655dde8b0bb6c14bc53381f5_linear-overview-transcode.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-c-black-2/60 flex justify-center items-center">
+  useEffect(() => {
+    const scriptUrl = "https://player.vimeo.com/api/player.js";
+
+    if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
+      const script = document.createElement("script");
+      script.src = scriptUrl;
+      script.async = true;
+      script.onload = () => setIsScriptLoaded(true);
+      document.body.appendChild(script);
+    } else {
+      setIsScriptLoaded(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isScriptLoaded && videoRef.current) {
+      playerRef.current = new window.Vimeo.Player(videoRef.current, {
+        id: 1053367262,
+        hash: "905de5956f",
+        autoplay: true,
+        muted: true,
+        background: true,
+      });
+
+      playerRef.current.on("play", () => setIsVideoPlaying(true));
+      playerRef.current.on("pause", () => setIsVideoPlaying(false));
+    }
+
+    return () => {
+      playerRef.current?.destroy();
+    };
+  }, [isScriptLoaded]);
+
+  const handlePlayPause = async () => {
+    if (isVideoPlaying === 0) {
+      setIsVideoPlaying(true);
+      setShowOverlay(false);
+      return;
+    }
+    resetOverlayTimeout();
+    if (playerRef.current) {
+      try {
+        if (isVideoPlaying) {
+          await playerRef.current.pause();
+        } else {
+          await playerRef.current.play();
+        }
+      } catch (error) {
+        console.error("Error controlling video:", error);
+      }
+    }
+  };
+
+  const resetOverlayTimeout = () => {
+    setShowOverlay(true);
+    if (overlayTimeout.current) clearTimeout(overlayTimeout.current);
+
+    overlayTimeout.current = setTimeout(() => {
+      setShowOverlay(false);
+    }, 1000);
+  };
+
+  return (
+    <div
+      className="w-full flex justify-center"
+      onMouseMove={resetOverlayTimeout}
+    >
+      <div className="w-full max-w-[343px] c-md:max-w-[656px] lg:max-w-[768px] 2xl:max-w-[1152px] pt-[193px] c-md:pt-[369px] lg:pt-[768px] 2xl:pt-[648px] relative">
+        <iframe
+          ref={videoRef}
+          src="https://player.vimeo.com/video/1053367262?h=905de5956f&background=1&controls=0&autopause=0&player_id=0&app_id=58479"
+          allow="autoplay; fullscreen; picture-in-picture"
+          className="absolute top-0 left-0 w-full h-full"
+          title="Des-X Design Showreel"
+        />
+
+        <div
+          className={`absolute inset-0 flex justify-center items-center bg-black/60 transition-opacity duration-500 ${
+            showOverlay ? "opacity-100" : "opacity-0"
+          }`}
+          onMouseEnter={() => setShowOverlay(true)}
+          onMouseLeave={resetOverlayTimeout}
+          onClick={handlePlayPause}
+        >
           <Button
-            text={"Watch the full showreel"}
-            icon={"play"}
+            text={isVideoPlaying ? "Pause video" : "See how we roll"}
+            icon={isVideoPlaying ? "pause" : "play"}
             theme={"primary"}
+            onClick={handlePlayPause}
           />
         </div>
       </div>

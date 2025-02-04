@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export const Button = ({
@@ -6,10 +7,11 @@ export const Button = ({
   theme = "primary" | "secondary" | "tertiary",
   link = null,
   width = null,
+  onClick = () => {},
 }) => {
   return (
     <button
-      className={`uppercase flex items-center justify-between rounded-2.5 backdrop-blur-10 p-5 border whitespace-nowrap ${
+      className={`uppercase flex items-center justify-between backdrop-blur-10 border whitespace-nowrap p-5 rounded-2.5 ${
         theme === "primary"
           ? "bg-primary hover:bg-c-blue border-c-blue text-white"
           : theme === "secondary"
@@ -18,6 +20,7 @@ export const Button = ({
       } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 hover:rounded-12 transition-all duration-150 ease-linear ${
         width || "w-full max-w-105.5"
       }`}
+      onClick={onClick}
     >
       {link ? <Link href={link}>{text}</Link> : text}
       <span className="size-7">
@@ -50,6 +53,16 @@ const Icon = ({ name, theme }) => {
           d="M7.74561 5.11206V23.5441L22.7216 14.3281L7.74561 5.11206Z"
           stroke={theme === "primary" ? "white" : "#111928"}
           strokeWidth="2.304"
+        />
+      </svg>
+    ),
+    pause: (
+      <svg viewBox="0 0 24 24" {...commonProps}>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M7 4.8C7 4.35817 7.3198 4 7.71429 4H9.14286C9.53735 4 9.85714 4.35817 9.85714 4.8V19.2C9.85714 19.6418 9.53735 20 9.14286 20H7.71429C7.52485 20 7.34316 19.9157 7.20921 19.7657C7.07525 19.6157 7 19.4122 7 19.2L7 4.8ZM14.1429 4.8C14.1429 4.35817 14.4627 4 14.8571 4H16.2857C16.4752 4 16.6568 4.08429 16.7908 4.23431C16.9247 4.38434 17 4.58783 17 4.8L17 19.2C17 19.6418 16.6802 20 16.2857 20H14.8571C14.4627 20 14.1429 19.6418 14.1429 19.2V4.8Z"
+          fill="white"
         />
       </svg>
     ),
