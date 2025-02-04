@@ -48,7 +48,7 @@ export const Packages = () => {
         {packagesData.map((work, workIndex) => (
           <div
             key={workIndex}
-            className={`bg-package-card backdrop-blur-10 flex flex-col gap-5 p-5 rounded-2.5 overflow-hidden ${
+            className={`bg-package-card backdrop-blur-3xl flex flex-col gap-5 p-5 rounded-2.5 overflow-hidden ${
               work.recommended ? "recommended" : ""
             }`}
           >
