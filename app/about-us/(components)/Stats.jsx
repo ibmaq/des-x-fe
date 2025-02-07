@@ -11,6 +11,7 @@ export const Stats = () => {
       whileInView={{ opacity: 1, scaleY: 1 }}
       transition={{
         duration: 0.7,
+        delay: 0.5,
         ease: "easeInOut",
       }}
       viewport={{ once: true, amount: 1 }}

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { motion } from "motion/react";
 import { methodsData } from "@/public/utils/data";
 
 export default function Methodology() {
@@ -15,18 +16,36 @@ export default function Methodology() {
       <div className="w-full flex flex-col gap-10">
         {/* Heading */}
         <div className="flex justify-between items-center w-full c-container-2">
-          <p className="text-13.5/none c-md:text-20/none 2xl:text-30/none text-c-white font-bebas -tracking-3.84">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true, amount: 0.8}}
+            className="text-13.5/none c-md:text-20/none 2xl:text-30/none text-c-white font-bebas -tracking-3.84"
+          >
             Methodology
-          </p>
-          <p className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 capitalize text-right w-full max-w-[573px]">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.8}}
+            className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 capitalize text-right w-full max-w-[573px]"
+          >
             Understanding your vision is where it all begins. We dive deep into
             your goals, audience, and challenges to uncover opportunities that
             drive impact. Research and collaboration lay the foundation for
             success.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true, amount: 0.8}}
+          className="flex flex-col gap-3"
+        >
           <div className="w-full flex justify-end c-container-2">
             <button onClick={() => swiperRef.current?.slidePrev()}>
               <svg
@@ -68,7 +87,7 @@ export default function Methodology() {
               navigation={false}
               mousewheel={{ forceToAxis: true }}
               grabCursor={true}
-              className="absolute inset-0 w-screen 4xl:max-w-screen-3xl"
+              className="absolute inset-0 w-full right-[calc((100vh-1320px)/2)] 4xl:max-w-screen-3xl !overflow-visible"
               slidesPerView={"auto"}
             >
               {methodsData.map((item, index) => (
@@ -95,7 +114,7 @@ export default function Methodology() {
               ))}
             </Swiper>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
