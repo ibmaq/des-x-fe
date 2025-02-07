@@ -3,10 +3,9 @@ import Image from "next/image";
 import { Button } from "./Button";
 import { useEffect, useRef } from "react";
 import { servicesData } from "@/public/utils/data";
+import { motion } from "motion/react";
 
 export const ServicesOffered = () => {
-
-
   const cardsRef = useRef([]);
   const sectionRef = useRef(null);
 
@@ -54,11 +53,14 @@ export const ServicesOffered = () => {
       </div>
       <div className="flex flex-col gap-10 lg:mx-12" ref={sectionRef}>
         {servicesData.map((work, workIndex) => (
-          <div
+          <motion.div
             key={workIndex}
             className="flex flex-col-reverse lg:flex-row lg:justify-between gap-10 p-5 2xl:p-10 border border-c-white/30 rounded-xl bg-c-black-2"
             ref={(el) => (cardsRef.current[workIndex] = el)}
-            style={{ transition: "width 0.3s ease" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            viewport={{ once: false, amount: 0.8 }}
           >
             <div className="flex flex-col gap-8 lg:gap-48 2xl:justify-between">
               <div className="flex flex-col">
@@ -83,7 +85,7 @@ export const ServicesOffered = () => {
               height={333}
               className="rounded-1 w-full lg:max-w-113.5 lg:h-83.25"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
       {/* <Button text={"see all services"} icon={"arrow"} theme={"secondary"} /> */}

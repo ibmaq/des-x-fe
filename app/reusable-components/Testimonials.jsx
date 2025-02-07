@@ -1,8 +1,8 @@
+"use client";
 import { reviewsData } from "@/public/utils/data";
+import { motion } from "motion/react";
 
 export const Testimonials = () => {
-
-
   return (
     <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 c-container">
       <h2 className="font-bebas text-white text-6xl c-md:text-27.5 lg:text-48 leading-none -tracking-2 uppercase text-left w-full">
@@ -10,7 +10,14 @@ export const Testimonials = () => {
       </h2>
       <div className="flex flex-col lg:flex-row gap-8">
         {reviewsData.map((review, reviewIndex) => (
-          <div key={reviewIndex} className="flex flex-col gap-7">
+          <motion.div
+            key={reviewIndex}
+            initial={{ opacity: 0, scale: 1.4, }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2, delay: reviewIndex * 1.05 }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="flex flex-col gap-7"
+          >
             <span className="w-12.5 h-12.5">
               <svg
                 viewBox="0 0 51 45"
@@ -31,7 +38,7 @@ export const Testimonials = () => {
               <p className="text-xl c-md:text-6.5/1.4">{review.title}</p>
               <p className="text-sm c-md:text-base/1.4">{review.designation}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
