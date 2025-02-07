@@ -36,7 +36,7 @@ export const Packages = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 contained">
+    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 c-container">
       <div className="flex flex-col gap-3 items-center text-center">
         <h2 className="section-title">We keep it simple & Flexible</h2>
         <p className="text-gray-300 text-base font-medium capitalize">

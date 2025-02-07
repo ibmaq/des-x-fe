@@ -83,9 +83,14 @@ body {
   padding: 3rem;
 }
 
-.contained {
+.c-container {
   width: 100%;
   max-width: 1600px;
+  margin-inline: auto;
+}
+.c-container-2 {
+  width: 100%;
+  max-width: 1320px;
   margin-inline: auto;
 }
 
@@ -99,6 +104,11 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #fcfff4;
+}
+
+.swiper-slide {
+  height: auto !important;
+  width: fit-content !important;
 }
 
 /* Marquee styles */
@@ -432,7 +442,8 @@ body {
 
 /* What We Offer Section Classes */
 
-.services {
+.services,
+.stats {
   border-width: 1px 0px 1px 0px;
   border-style: solid;
   border-color: #ffffff26;
@@ -503,7 +514,7 @@ body {
       box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease-in-out;
   }
   .bg-package-card.recommended:hover {
-  box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
+    box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
     border: none;
   }
   .package-card-grid-bg {

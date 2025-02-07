@@ -67,7 +67,7 @@ export const DesignExcellence = () => {
         </p>
       </div>
       {/* <div className="flex flex-col gap-20 lg:mx-12"> */}
-      <div className="container grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 contained">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 c-container">
         {designExcellenceData.map((work, workIndex) => (
           <div
             key={workIndex}

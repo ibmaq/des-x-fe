@@ -1,11 +1,11 @@
 import { Packages } from "../reusable-components/Packages";
 import { ServicesOffered } from "../reusable-components/ServicesOffered";
-import { Testmionials } from "../reusable-components/Testmionials";
+import { Testimonials } from "../reusable-components/Testimonials";
+import { DesignExcellence } from "./(components)/DesignExcellence";
 import { Hero } from "./(components)/Hero";
 import { InfoSection } from "./(components)/InfoSection";
 import { LatestWorks } from "./(components)/LatestWorks";
 import { ShowReel } from "./(components)/ShowReel";
-import { DesignExcellence } from "./(components)/DesignExcellence";
 import { TrustedBy } from "./(components)/TrustedBy";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       <InfoSection />
       <ServicesOffered />
       <Packages />
-      <Testmionials />
+      <Testimonials />
     </>
     // </div>
   );

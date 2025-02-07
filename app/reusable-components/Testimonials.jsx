@@ -1,10 +1,10 @@
 import { reviewsData } from "@/public/utils/data";
 
-export const Testmionials = () => {
+export const Testimonials = () => {
 
 
   return (
-    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 contained">
+    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 c-container">
       <h2 className="font-bebas text-white text-6xl c-md:text-27.5 lg:text-48 leading-none -tracking-2 uppercase text-left w-full">
         What People say
       </h2>
