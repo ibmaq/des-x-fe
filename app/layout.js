@@ -1,7 +1,7 @@
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import { Footer } from "./reusable-components/Footer";
 import { Navbar } from "./reusable-components/Navbar";
+import { Footer } from "./reusable-components/Footer";
 
 const bebas = Bebas_Neue({
   variable: "--font-bebas-neue",

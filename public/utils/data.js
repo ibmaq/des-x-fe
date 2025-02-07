@@ -174,3 +174,61 @@ export const packagesData = [
     ],
   },
 ];
+
+export const statsData = [
+  {
+    id: 0,
+    count: 50,
+    title: "Projects Complete",
+    desc: "Our goal wasn’t just to take on more Projects —it was to consistently deliver exceptional quality in every single one.",
+    suffix: "+",
+  },
+  {
+    id: 0,
+    count: 100,
+    title: "Raised",
+    desc: "Our pitch decks & MVP’s weren’t just designs—they were game-changers! We’re proud to have helped our clients raise over $100k+ USD, turning ideas into investments.",
+    prefix: "$",
+    suffix: "K+",
+  },
+  {
+    id: 0,
+    count: 100,
+    title: "Satisfied Clients",
+    desc: "Our pitch decks weren’t just designs—they were game-changers! We’re proud to have helped our clients raise over $100k+ USD, turning ideas into investments.",
+    suffix: "+",
+  },
+];
+
+export const methodsData = [
+  {
+    id: 0,
+    title: "Understand",
+    subTitle: "Getting What You Need",
+    desc: "We start by learning about your goals, challenges, and audience to create the right solution.",
+  },
+  {
+    id: 1,
+    title: "Plan",
+    subTitle: "Figuring Out the Best Idea",
+    desc: "We brainstorm and come up with creative ideas that match your vision and solve your problems.",
+  },
+  {
+    id: 2,
+    title: "Create",
+    subTitle: "Designing Something Amazing",
+    desc: "We turn ideas into designs that look great, work well, and connect with your audience.",
+  },
+  {
+    id: 3,
+    title: "Perfect",
+    subTitle: "Making It Just Right",
+    desc: "We fine-tune everything based on your feedback to ensure it’s perfect.",
+  },
+  {
+    id: 4,
+    title: "Deliver",
+    subTitle: "Making It Real",
+    desc: "We launch the final product, ready to wow your audience and achieve your goals.",
+  },
+];

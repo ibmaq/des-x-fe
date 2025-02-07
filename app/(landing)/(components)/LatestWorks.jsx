@@ -81,7 +81,10 @@ export const LatestWorks = () => {
   }, []);
 
   return (
-    <div className="latest-works flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 3xl:px-33.75 py-35 contained">
+    <div
+      id="works"
+      className="latest-works flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 3xl:px-33.75 py-35 c-container"
+    >
       <div className="flex flex-col gap-3 items-center text-center">
         <h2 className="section-title">Who we have Helped</h2>
         <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">

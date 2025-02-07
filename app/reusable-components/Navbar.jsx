@@ -10,8 +10,8 @@ export const Navbar = () => {
 
   const menuItems = [
     { title: "home", link: "/" },
-    { title: "works", link: "/" },
-    { title: "about", link: "/" },
+    { title: "works", link: "/#works" },
+    { title: "about", link: "/about-us" },
     { title: "contact", link: "/" },
   ];
 

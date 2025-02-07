@@ -42,13 +42,13 @@ function ParallaxLogos({ baseVelocity = 1 }) {
   });
 
   return (
-    <div className="w-full max-w-[calc(100vw-16px)] overflow-hidden">
+    <div id="works" className="w-full max-w-[calc(100vw-16px)] overflow-hidden">
       <div className="w-full flex py-10">
-        <motion.div className="scroller flex gap-6" style={{ x }}>
+        <motion.div className="scroller flex gap-4" style={{ x }}>
           {[...Array(4)].map((_, repeatIdx) =>
             worksData.map((work, workIndex) => (
               <Link
-                className="w-[388px]"
+                className="w-[194px] c-md:w-[388px]"
                 key={`${repeatIdx}-${workIndex}`}
                 href={work.link !== "coming-soon" ? work.link : "#"}
                 scroll={work.link !== "coming-soon" ? true : false}
@@ -65,7 +65,7 @@ function ParallaxLogos({ baseVelocity = 1 }) {
                       alt={work.title}
                       width={388}
                       height={443}
-                      className="w-[388px] h-[443px] object-cover"
+                      className="w-[194px] c-md:w-[388px] h-[240px] c-md:h-[443px] object-cover"
                     />
                   </div>
                   <div className="flex flex-col uppercase">
