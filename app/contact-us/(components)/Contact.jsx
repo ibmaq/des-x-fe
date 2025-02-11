@@ -40,14 +40,14 @@ export default function Contact() {
 
   return (
     <div ref={ref} className="contact-wrapper">
-      <div className="w-full flex flex-col gap-10 c-container-3 py-35 lg:py-42.25 px-4 c-md:px-8 lg:px-15">
+      <div className="w-full flex flex-col gap-10 c-container-3 py-35 lg:py-42.25 px-4 c-md:px-8 lg:px-0">
         <div className="flex flex-col gap-5 lg:text-center">
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="text-22.5/none c-md:text-29/none 2xl:text-30/none text-c-white font-bebas -tracking-0.19"
+            className="text-22.5/none c-md:text-29/none 2xl:text-30/none text-c-white font-bebas sm:-tracking-2 c-md:-tracking-3.84"
           >
             Let’s bring your Ideas to Reality!
           </motion.p>
@@ -64,11 +64,11 @@ export default function Contact() {
           </motion.p>
         </div>
         <motion.form
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scaleY: 0 }}
+          whileInView={{ opacity: 1, scaleY: 1 }}
           transition={{ duration: 0.4, delay: 1.2 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-10 lg:mx-22.875 *:appearance-none *:text-c-white *:placeholder:text-c-white/70 *:pb-4 *:text-xl/6 *:-tracking-0.19"
+          className="flex flex-col gap-10 2xl:mx-22.875 *:appearance-none *:text-c-white *:placeholder:text-c-white/70 *:pb-4 *:text-xl/6 *:-tracking-0.19 origin-top w-full"
         >
           <input
             type="text"
