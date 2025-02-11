@@ -12,7 +12,7 @@ export const Navbar = () => {
     { title: "home", link: "/" },
     { title: "works", link: "/#works" },
     { title: "about", link: "/about-us" },
-    { title: "contact", link: "/" },
+    { title: "contact", link: "/contact-us" },
   ];
 
   const handleActiveState = () => {

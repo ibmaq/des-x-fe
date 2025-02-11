@@ -76,6 +76,7 @@ export const ServicesOffered = () => {
                 icon={"rightArrow"}
                 theme={"primary"}
                 width={"w-full lg:max-w-105.5"}
+                link={"/contact-us"}
               />
             </div>
             <Image

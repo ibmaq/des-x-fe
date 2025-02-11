@@ -132,6 +132,7 @@ export const Packages = () => {
               icon={"rightArrow"}
               theme={"primary"}
               width={"w-full"}
+              link={"/contact-us"}
             />
           </div>
         ))}
