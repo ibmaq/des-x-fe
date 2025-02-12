@@ -34,7 +34,7 @@ export const Footer = () => {
       }
 
       const calculatedFontSize = (windowWidth - paddings) / divider;
-      const calculatedHeight = calculatedFontSize + 24;
+      const calculatedHeight = calculatedFontSize;
 
       updateCustomSizes((prev) =>
         prev.font !== `${calculatedFontSize}px`
@@ -49,7 +49,7 @@ export const Footer = () => {
   }, []);
   return (
     <footer className=" bg-c-white">
-      <div className="w-full 4xl:max-w-screen-3xl 4xl:mx-auto px-4 c-md:px-8 lg:px-10 py-10 flex flex-col gap-15 font-bebas">
+      <div className="w-full 4xl:max-w-screen-3xl 4xl:mx-auto px-4 c-md:px-8 lg:px-10 pt-10 flex flex-col gap-15 font-bebas">
         <p className="text-c-black text-13.5 c-md:text-15.5 -tracking-1 leading-none">
           Your Search for a design partner ends here..
         </p>

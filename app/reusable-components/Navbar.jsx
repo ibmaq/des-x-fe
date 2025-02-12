@@ -54,7 +54,7 @@ export const Navbar = () => {
           : isSticky || lastScrollTop === 0
           ? "top-6 lg:top-10 translate-y-0"
           : "top-0 -translate-y-full"
-      } sticky max-w-145 mx-6 c-md:mx-auto z-50 transition-all ease-linear duration-300`}
+      } sticky max-w-216 mx-6 c-md:mx-auto z-50 transition-all ease-linear duration-300`}
     >
       <div
         className={`flex justify-between items-center px-4 py-3 border border-gray-50 backdrop-blur-2xl bg-c-white/8 rounded-t-xl z-10 transition-all ease-in-out ${
@@ -106,7 +106,7 @@ export const Navbar = () => {
         </span>
       </div>
       <div
-        className={`absolute max-h-121.75 lg:max-h-80 left-0 top-20.25 w-full lg:w-216 border border-c-white/30 border-t-0 rounded-b-9.6 overflow-hidden bg-c-white/8 backdrop-blur-2xl z-10 transition-all ease-in-out duration-500 ${
+        className={`absolute max-h-121.75 lg:max-h-80 left-0 top-16.4 w-full lg:w-216 border border-gray-50 border-t-0 rounded-b-9.6 overflow-hidden bg-c-white/8 backdrop-blur-2xl z-10 transition-all ease-in-out duration-500 ${
           active
             ? "h-screen pointer-events-auto"
             : "h-0 pointer-events-none border-0"
@@ -119,7 +119,7 @@ export const Navbar = () => {
         >
           {menuItems.map((item, itemIndex) => (
             <li
-              className="w-full *:border *:border-transparent *:max-sm:border-b-c-white/30 *:max-sm:last:border-b-0  *:lg:border-r-c-white/30 *:lg:last:border-r-0"
+              className="w-full *:border *:border-transparent *:max-sm:border-b-gray-50 *:max-sm:last:border-b-0  *:lg:border-r-gray-50 *:lg:last:border-r-0"
               key={itemIndex}
             >
               <Link

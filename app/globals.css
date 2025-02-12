@@ -113,7 +113,6 @@ body {
 }
 
 /* Custom Checkbox */
-
 .c-checkbox {
   position: relative;
   width: 1rem;
@@ -131,8 +130,8 @@ body {
   cursor: pointer;
 }
 
-.c-checkbox::before {
-  content: "";
+/* Custom checkbox box */
+.checkbox-box {
   position: absolute;
   width: 1rem;
   height: 1rem;
@@ -142,24 +141,28 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
-.c-checkbox input[type="checkbox"]:checked + .c-checkbox::before {
-  background-color: #1d4ed8; /* Change this to your primary color */
-  border-color: #1e40af;
-}
-
-.c-checkbox::after {
-  content: "";
+/* Hide the SVG by default */
+.c-checkbox svg {
   position: absolute;
-  width: 0.5rem;
-  height: 0.25rem;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
-  transform: rotate(-45deg);
+  width: 0.8rem;
+  height: 0.8rem;
+  stroke: #5647ff;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
 
-.c-checkbox input[type="checkbox"]:checked + .c-checkbox::after {
+/* Show checkmark and change background when checked */
+/* .c-checkbox input[type="checkbox"]:checked ~ .checkbox-box {
+  background-color: #1d4ed8;
+  border-color: #1e40af;
+} */
+
+.c-checkbox input[type="checkbox"]:checked ~ svg {
+  opacity: 1;
+}
+
+
+.c-checkbox input[type="checkbox"]:checked + .c-checkbox svg {
   opacity: 1;
 }
 
@@ -698,6 +701,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  z-index: -1;
 }
 @media (min-width: 1024px) {
   .contact-bg {

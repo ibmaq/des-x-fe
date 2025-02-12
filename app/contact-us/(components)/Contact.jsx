@@ -25,7 +25,10 @@ export default function Contact() {
     budget: "",
   });
   const handleChange = (e) => {
+    e.stopPropagation(); // Prevent double event from bubbling up
+
     const { name, value, type, checked } = e.target;
+
     if (type === "checkbox") {
       setFormData((prev) => ({
         ...prev,
@@ -35,6 +38,42 @@ export default function Contact() {
       }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleCheckboxClick = (e, serviceTitle) => {
+    e.preventDefault();
+
+    setFormData((prev) => {
+      const isChecked = prev.selectedServices.includes(serviceTitle);
+      return {
+        ...prev,
+        selectedServices: isChecked
+          ? prev.selectedServices.filter((service) => service !== serviceTitle)
+          : [...prev.selectedServices, serviceTitle],
+      };
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Email sent successfully!");
+      } else {
+        alert("Failed to send email.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Something went wrong.");
     }
   };
 
@@ -103,9 +142,14 @@ export default function Contact() {
             </label>
             <div className="flex flex-col gap-5">
               {contactServicesList.map((service, serviceIndex) => (
-                <div key={serviceIndex} className="flex gap-2 items-center">
+                <div
+                  key={serviceIndex}
+                  className="flex gap-2 items-center w-fit cursor-pointer"
+                  onClick={(e) => handleCheckboxClick(e, service.title)} // Clicking the whole div works!
+                >
                   <div className="c-checkbox">
                     <input
+                      id={`checkbox-${serviceIndex}`}
                       type="checkbox"
                       name="selectedServices"
                       value={service.title}
@@ -114,8 +158,29 @@ export default function Contact() {
                       )}
                       onChange={handleChange}
                     />
+                    <div className="checkbox-box"></div>{" "}
+                    {/* Custom checkbox UI */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-check"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
                   </div>
-                  <label className="text-base/none">{service.title}</label>
+                  <label
+                    htmlFor={`checkbox-${serviceIndex}`}
+                    className="text-base/none"
+                  >
+                    {service.title}
+                  </label>
                 </div>
               ))}
             </div>
@@ -185,8 +250,9 @@ export default function Contact() {
           />
         </motion.form>
       </div>
+
       <div className="contact-bg">
-        <motion.div className="contact-bg-img-1" style={{ y: y1 }}>
+        <motion.div className="contact-bg-img-1 select-none" style={{ y: y1 }}>
           <Image
             src={"/images/services/1-blurred.png"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
@@ -194,7 +260,7 @@ export default function Contact() {
             height={376}
           />
         </motion.div>
-        <motion.div className="contact-bg-img-2" style={{ y: y2 }}>
+        <motion.div className="contact-bg-img-2 select-none" style={{ y: y2 }}>
           <Image
             src={"/images/services/2-blurred.png"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
@@ -202,7 +268,7 @@ export default function Contact() {
             height={252}
           />
         </motion.div>
-        <motion.div className="contact-bg-img-3" style={{ y: y3 }}>
+        <motion.div className="contact-bg-img-3 select-none" style={{ y: y3 }}>
           <Image
             src={"/images/services/3-blurred.png"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
