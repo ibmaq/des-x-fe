@@ -5,7 +5,7 @@ import Methodology from "./(components)/Methodology";
 import MethodologySM from "./(components)/Methodology-sm";
 import { Stats } from "./(components)/Stats";
 
-export default function Home() {
+export default function AboutUs() {
   return (
     <div className="w-full mx-auto">
       <Hero />

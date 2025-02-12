@@ -125,6 +125,7 @@ export const Hero = () => {
               icon={"rightArrow"}
               theme={"secondary"}
               width={"w-full max-w-[795px] mx-auto"}
+              link={"/contact-us"}
             />
           </div>
         </div>
