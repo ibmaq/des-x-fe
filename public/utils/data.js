@@ -4,42 +4,42 @@ export const designExcellenceData = [
     title: "Designs That Drive Results",
     content:
       "We focus on creating user-friendly designs that don’t just look good—they solve real problems and achieve your business goal",
-    img: "/images/services/1.png",
+    img: "/images/services/1.webp",
   },
   {
     id: 1,
     title: "Tailored Solutions, Every Time",
     content:
       "No templates, no shortcuts. Every design we create is customized to fit your unique brand and audience.",
-    img: "/images/services/2.png",
+    img: "/images/services/2.webp",
   },
   {
     id: 2,
     title: "Collaboration That Counts",
     content:
       "We work with you every step of the way, combining your vision with our expertise for designs that truly stand out.",
-    img: "/images/services/3.png",
+    img: "/images/services/3.webp",
   },
   {
     id: 3,
     title: "Experience Meets Innovation",
     content:
       "With years of expertise and a pulse on the latest trends, we craft designs that are both timeless and cutting-edge.",
-    img: "/images/services/2.png",
+    img: "/images/services/2.webp",
   },
   {
     id: 3,
     title: "Scalable Design Systems",
     content:
       "We build systems that grow with your business, ensuring consistency and adaptability across platforms.",
-    img: "/images/services/3.png",
+    img: "/images/services/3.webp",
   },
   {
     id: 3,
     title: "Seamless Communication",
     content:
       "We prioritize transparency and clarity, keeping you informed and involved throughout the entire design process.",
-    img: "/images/services/1.png",
+    img: "/images/services/1.webp",
   },
 ];
 

@@ -107,7 +107,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, scaleY: 1 }}
           transition={{ duration: 0.4, delay: 1.2 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-10 2xl:mx-22.875 *:appearance-none *:text-c-white *:placeholder:text-c-white/70 *:pb-4 *:text-xl/6 *:-tracking-0.19 origin-top w-full"
+          className="flex flex-col gap-10 lg:px-22.875 *:appearance-none *:text-c-white *:placeholder:text-c-white/70 *:pb-4 *:text-xl/6 *:-tracking-0.19 origin-top w-full"
         >
           <input
             type="text"
@@ -254,7 +254,7 @@ export default function Contact() {
       <div className="contact-bg">
         <motion.div className="contact-bg-img-1 select-none" style={{ y: y1 }}>
           <Image
-            src={"/images/services/1-blurred.png"}
+            src={"/images/services/1-blurred.webp"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
             width={400}
             height={376}
@@ -262,7 +262,7 @@ export default function Contact() {
         </motion.div>
         <motion.div className="contact-bg-img-2 select-none" style={{ y: y2 }}>
           <Image
-            src={"/images/services/2-blurred.png"}
+            src={"/images/services/2-blurred.webp"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
             width={268}
             height={252}
@@ -270,7 +270,7 @@ export default function Contact() {
         </motion.div>
         <motion.div className="contact-bg-img-3 select-none" style={{ y: y3 }}>
           <Image
-            src={"/images/services/3-blurred.png"}
+            src={"/images/services/3-blurred.webp"}
             alt="asbtract-image-look-like-shiny-metal-strips-rounded-to-make-rings"
             width={501}
             height={470}
