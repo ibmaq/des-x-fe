@@ -15,7 +15,7 @@ export default function Page() {
           <DablyIcon />
         </span>
       </HeaderSection>
-      <div className="flex flex-col lg:gap-15 gap-8 md:gap-12 lg:py-30 py-10 md:py-20">
+      <div className="flex flex-col gap-20 lg:py-30 py-10 md:py-20">
         <PreciousMetals />
         <UserStories />
         <WireFrames />
