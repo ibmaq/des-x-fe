@@ -46,12 +46,7 @@ export const InfoSection = () => {
           Experiences
         </span>
       </h2>
-      <Button
-        text={"Get to know us"}
-        icon={"play"}
-        theme={"primary"}
-        link={"/about-us"}
-      />
+      <Button text={"Get to know us"} icon={"play"} theme={"primary"} />
     </div>
   );
 };
