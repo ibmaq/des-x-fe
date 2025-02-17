@@ -6,12 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --background: #0f0f0f;
-  --foreground: #171717;
-}
-/* Font Face Setup for Avenir */
-
 @font-face {
   font-family: "Avenir";
   font-style: normal;
@@ -52,8 +46,6 @@ html {
   font-display: swap;
 }
 
-/* Hide Scrollbar */
-
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   html::-webkit-scrollbar {
@@ -65,6 +57,18 @@ html {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+:root {
+  --background: #0f0f0f;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
 
 body {
   color: var(--foreground);
@@ -89,11 +93,6 @@ body {
   max-width: 1320px;
   margin-inline: auto;
 }
-.c-container-3 {
-  width: 100%;
-  max-width: 823px;
-  margin-inline: auto;
-}
 
 .section-title {
   font-family: Bebas Neue;
@@ -110,60 +109,6 @@ body {
 .swiper-slide {
   height: auto !important;
   width: fit-content !important;
-}
-
-/* Custom Checkbox */
-.c-checkbox {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.c-checkbox input[type="checkbox"] {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Custom checkbox box */
-.checkbox-box {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  background-color: #374151;
-  border: 0.5px solid #4b5563;
-  border-radius: 4px;
-  transition: background 0.2s ease-in-out;
-}
-
-/* Hide the SVG by default */
-.c-checkbox svg {
-  position: absolute;
-  width: 0.8rem;
-  height: 0.8rem;
-  stroke: #5647ff;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-/* Show checkmark and change background when checked */
-/* .c-checkbox input[type="checkbox"]:checked ~ .checkbox-box {
-  background-color: #1d4ed8;
-  border-color: #1e40af;
-} */
-
-.c-checkbox input[type="checkbox"]:checked ~ svg {
-  opacity: 1;
-}
-
-
-.c-checkbox input[type="checkbox"]:checked + .c-checkbox svg {
-  opacity: 1;
 }
 
 /* Marquee styles */
@@ -270,26 +215,26 @@ body {
   color: #1a1a1a; /* Change to white */
 }
 .footer-text-size {
-  /* font-size: 91.63px; */
+  font-size: 91.63px;
   line-height: 1;
   letter-spacing: -2.355433464050293px;
 }
 @media (min-width: 720px) {
   .footer-text-size {
-    /* font-size: 170.98px; */
+    font-size: 170.98px;
     letter-spacing: -4.39px;
   }
 }
 @media (min-width: 1440px) {
   .footer-text-size {
-    /* font-size: 363.33px; */
+    font-size: 363.33px;
     letter-spacing: -9.34px;
   }
 }
 @media (min-width: 1920px) {
   .footer-text-size {
-    /* font-size: 491.56px; */
-    letter-spacing: -12.63556289672851px;
+    font-size: 491.56px;
+    letter-spacing: -12.635562896728516px;
   }
 }
 .custom-height {
@@ -559,32 +504,17 @@ body {
 }
 
 @media (min-width: 768px) {
-  .bg-package-card {
-    transition: filter 0.6s ease-in-out;
-    filter: none;
-  }
-
-  .bg-package-card:hover {
-    filter: none;
-  }
-
-  .bg-package-card:hover ~ .bg-package-card,
-  .bg-package-card:not(:hover):has(+ .bg-package-card:hover),
-  .bg-package-card:not(:hover):has(~ .bg-package-card:hover) {
-    filter: blur(4px);
-  }
-
   .bg-package-card.recommended {
     background-image: none;
     background-size: cover;
     position: relative;
-    /* box-shadow: 0px 0px 0px 0px rgba(86, 71, 255, 0); */
+    box-shadow: 0px 0px 0px 0px rgba(86, 71, 255, 0);
     background-color: #0f0f0f;
     transition: background-color 600ms ease-in-out,
       box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease-in-out;
-    box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
   }
   .bg-package-card.recommended:hover {
+    box-shadow: 0px 10px 74px 10px rgba(86, 71, 255, 0.4);
     border: none;
   }
   .package-card-grid-bg {
@@ -622,6 +552,22 @@ body {
   .bg-package-card.recommended::after {
     background: linear-gradient(to bottom, #010002 0%, #332b99 100%);
   }
+
+  /* .bg-package-card.recommended::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 29%,
+      rgba(0, 0, 0, 0.5) 60%
+    );
+  }
+
+  .bg-package-card.recommended::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(1, 0, 2, 0.7) 0%,
+      rgba(51, 43, 153, 0.5) 100%
+    );
+  } */
 
   .bg-package-card.recommended:hover::before,
   .bg-package-card.recommended:hover::after {
@@ -683,45 +629,4 @@ body {
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
-}
-
-/* Contact Page */
-.contact-wrapper {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-}
-.contact-bg {
-  position: absolute;
-  width: 100%;
-  max-width: 2560px;
-  min-width: 1920px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  z-index: -1;
-}
-@media (min-width: 1024px) {
-  .contact-bg {
-    width: 100%;
-    max-width: 2560px;
-  }
-}
-
-.contact-bg-img-1 {
-  position: absolute;
-  top: 360px;
-  right: 60px;
-}
-.contact-bg-img-2 {
-  position: absolute;
-  top: 624px;
-  left: 195px;
-}
-.contact-bg-img-3 {
-  position: absolute;
-  bottom: 0;
-  right: 60px;
 }

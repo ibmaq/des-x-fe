@@ -1,6 +1,7 @@
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import LayoutWraper from "./LayoutWrapper";
+import { Navbar } from "./reusable-components/Navbar";
+import { Footer } from "./reusable-components/Footer";
 
 const bebas = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -17,7 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${bebas.variable} antialiased cursor-default`}>
-        <LayoutWraper>{children}</LayoutWraper>
+        <Navbar />
+        <main>{children}</main>
+        {/* <main className="w-full max-w-screen-2xl mx-auto">{children}</main> */}
+        <Footer />
       </body>
     </html>
   );

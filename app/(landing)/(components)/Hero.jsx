@@ -173,14 +173,12 @@ export const Hero = () => {
               icon={"rightArrow"}
               theme={"secondary"}
               width={"w-full lg:w-[489px]"}
-              link={"/contact-us"}
             />
             <Button
               text={"Latest Work @ 2024"}
               icon={"rightArrow"}
               theme={"tertiary"}
               width={"w-full lg:w-[290px]"}
-              link={"/#works"}
             />
           </div>
         </div>

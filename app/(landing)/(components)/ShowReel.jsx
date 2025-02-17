@@ -27,22 +27,16 @@ export const ShowReel = () => {
 
   useEffect(() => {
     if (isScriptLoaded && videoRef.current) {
-      // Ensure Vimeo is fully loaded before accessing Player
-      if (window.Vimeo && window.Vimeo.Player) {
-        playerRef.current = new window.Vimeo.Player(videoRef.current, {
-          id: 1053367262,
-          hash: "905de5956f",
-          autoplay: true,
-          muted: true,
-          background: true,
-        });
+      playerRef.current = new window.Vimeo.Player(videoRef.current, {
+        id: 1053367262,
+        hash: "905de5956f",
+        autoplay: true,
+        muted: true,
+        background: true,
+      });
 
-        playerRef.current.on("play", () => setIsVideoPlaying(true));
-        playerRef.current.on("pause", () => setIsVideoPlaying(false));
-      } else {
-        console.warn("Vimeo Player is not yet available. Retrying...");
-        setTimeout(() => setIsScriptLoaded((prev) => !prev), 100); // Retry after 100ms
-      }
+      playerRef.current.on("play", () => setIsVideoPlaying(true));
+      playerRef.current.on("pause", () => setIsVideoPlaying(false));
     }
 
     return () => {
