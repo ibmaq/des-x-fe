@@ -8,6 +8,8 @@ export const Button = ({
   link = null,
   width = null,
   onClick = () => {},
+  classes = {},
+  styles = {},
 }) => {
   return (
     <button
@@ -19,8 +21,9 @@ export const Button = ({
           : "bg-transparent border-white text-white backdrop-blur-10"
       } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 hover:rounded-12 transition-all duration-150 ease-linear ${
         width || "w-full max-w-105.5"
-      }`}
+      } ${classes ?? null}`}
       onClick={onClick}
+      style={styles ? { ...styles } : {}}
     >
       {link ? <Link href={link}>{text}</Link> : text}
       <span className="size-7">
