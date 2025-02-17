@@ -27,7 +27,7 @@ export default function HowItHappened() {
           unoptimized
         />
       </Animated>
-      <div className="grid grid-cols-2 w-full md:gap-6.5 gap-3 c-container">
+      <div className="grid grid-cols-2 w-full md:gap-6.5 gap-3 c-container overflow-hidden">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
