@@ -66,7 +66,7 @@ export default function Page() {
           </svg>
         </span>
       </HeaderSection>
-      <div className="flex flex-col lg:gap-15 gap-8 md:gap-12 lg:py-30 py-10 md:py-20 xl:px-20 px-4 md:px-8 lg:px-14">
+      <div className="flex flex-col lg:gap-20 gap-10 py-10 md:py-20 xl:px-20 px-4 c-md:px-8 2xl:px-15">
         <HowItHappened />
         <UserPersonas />
         <Interface />

@@ -44,7 +44,7 @@ function ParallaxLogos({ baseVelocity = 1 }) {
   return (
     <div className="w-full max-w-[calc(100vw-16px)] overflow-hidden">
       <div className="w-full flex py-10">
-        <motion.div className="scroller flex gap-6" style={{ x }}>
+        <motion.div className=" flex gap-6" style={{ x }}>
           {[...Array(4)].map((_, repeatIdx) =>
             logos.map((logo, idx) => (
               <div
