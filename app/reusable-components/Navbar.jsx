@@ -12,7 +12,7 @@ export const Navbar = () => {
     { title: "home", link: "/" },
     { title: "works", link: "/#works" },
     { title: "about", link: "/about-us" },
-    { title: "contact", link: "/" },
+    { title: "contact", link: "/contact-us" },
   ];
 
   const handleActiveState = () => {
@@ -54,63 +54,59 @@ export const Navbar = () => {
           : isSticky || lastScrollTop === 0
           ? "top-6 lg:top-10 translate-y-0"
           : "top-0 -translate-y-full"
-      } sticky max-w-216 mx-6 lg:mx-auto z-50 transition-all ease-linear duration-300`}
+      } sticky max-w-216 mx-6 c-md:mx-auto z-50 transition-all ease-linear duration-300`}
     >
       <div
-        className={`flex justify-between items-center px-6 py-5 border border-c-white/30 backdrop-blur-2xl bg-c-white/8 rounded-t-9.6 z-10 transition-all ease-in-out ${
-          active ? "rounded-b-0 delay-75" : "rounded-b-9.6 delay-500"
+        className={`flex justify-between items-center px-4 py-3 border border-gray-50 backdrop-blur-2xl bg-c-white/8 rounded-t-xl z-10 transition-all ease-in-out ${
+          active ? "rounded-b-0 delay-75" : "rounded-b-xl delay-500"
         } relative`}
       >
         <Link href={"/"}>
           <Image
             src={"/images/logo.png"}
             alt="des-x-design-logo"
-            width={195}
-            height={36}
+            width={137}
+            height={26}
           />
         </Link>
-        <div className="flex gap-4 items-center">
-          {/* <p className="font-bebas text-c-white text-2xl/none mt-1">Menu</p> */}
-          <span
-            className={`menu-burger-icon size-10 ${active ? "active" : ""}`}
-            onClick={() => handleActiveState()}
+        <span
+          className={`menu-burger-icon size-10 ${active ? "active" : ""}`}
+          onClick={() => handleActiveState()}
+        >
+          <svg
+            viewBox="0 0 39 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              viewBox="0 0 39 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="0.52"
-                y="1.49"
-                width="37.39"
-                height="37.39"
-                rx="18.695"
-                stroke="#FCFFF4"
-                strokeOpacity="0.3"
-              />
-              <rect
-                className="menu-burger-line top"
-                x="10.11"
-                y="16.38"
-                width="18.19"
-                height={1}
-                fill="#FCFFF4"
-              />
-              <rect
-                className="menu-burger-line btm"
-                x="10.11"
-                y="22.99"
-                width="18.19"
-                height={1}
-                fill="#FCFFF4"
-              />
-            </svg>
-          </span>
-        </div>
+            <rect
+              x="0.52"
+              y="1.49"
+              width="37.39"
+              height="37.39"
+              rx="18.695"
+              stroke="#F9FAFB"
+            />
+            <rect
+              className="menu-burger-line top"
+              x="10.11"
+              y="16.38"
+              width="18.19"
+              height={1}
+              fill="#F9FAFB"
+            />
+            <rect
+              className="menu-burger-line btm"
+              x="10.11"
+              y="22.99"
+              width="18.19"
+              height={1}
+              fill="#F9FAFB"
+            />
+          </svg>
+        </span>
       </div>
       <div
-        className={`absolute max-h-121.75 lg:max-h-80 left-0 top-20.25 w-full lg:w-216 border border-c-white/30 border-t-0 rounded-b-9.6 overflow-hidden bg-c-white/8 backdrop-blur-2xl z-10 transition-all ease-in-out duration-500 ${
+        className={`absolute max-h-121.75 lg:max-h-80 left-0 top-16.4 w-full lg:w-216 border border-gray-50 border-t-0 rounded-b-9.6 overflow-hidden bg-c-white/8 backdrop-blur-2xl z-10 transition-all ease-in-out duration-500 ${
           active
             ? "h-screen pointer-events-auto"
             : "h-0 pointer-events-none border-0"
@@ -123,7 +119,7 @@ export const Navbar = () => {
         >
           {menuItems.map((item, itemIndex) => (
             <li
-              className="w-full *:border *:border-transparent *:max-sm:border-b-c-white/30 *:max-sm:last:border-b-0  *:lg:border-r-c-white/30 *:lg:last:border-r-0"
+              className="w-full *:border *:border-transparent *:max-sm:border-b-gray-50 *:max-sm:last:border-b-0  *:lg:border-r-gray-50 *:lg:last:border-r-0"
               key={itemIndex}
             >
               <Link
