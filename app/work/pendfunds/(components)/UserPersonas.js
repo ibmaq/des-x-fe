@@ -12,7 +12,7 @@ export default function UserPersonas() {
     <div className="flex flex-col lg:gap-20 gap-10">
       <h1 className="section-title text-c-white">USER PERSONAS</h1>
 
-      <div className="grid grid-cols-2 w-full md:gap-6.5 gap-3 c-container">
+      <div className="grid grid-cols-2 w-full md:gap-6.5 gap-3 c-container overflow-hidden">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
