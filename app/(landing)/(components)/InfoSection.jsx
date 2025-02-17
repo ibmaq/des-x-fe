@@ -23,6 +23,7 @@ export const InfoSection = () => {
               width={60}
               height={60}
               className="border border-c-white/30 rounded-3.5 inline-flex aspect-square object-cover ml-1 lg:w-22.5 lg:h-22.5"
+              unoptimized
             />
           </span>{" "}
           <br className="block lg:hidden" />
