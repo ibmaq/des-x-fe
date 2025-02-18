@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const Testimonials = () => {
   return (
-    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 c-container">
+    <div className="flex flex-col gap-10 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-15 2xl:py-35 c-container overflow-hidden">
       <h2 className="font-bebas text-white text-6xl c-md:text-27.5 lg:text-48 leading-none -tracking-2 uppercase text-left w-full">
         What People say
       </h2>
@@ -12,10 +12,11 @@ export const Testimonials = () => {
         {reviewsData.map((review, reviewIndex) => (
           <motion.div
             key={reviewIndex}
-            initial={{ opacity: 0, scale: 1.4, }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.2, delay: reviewIndex * 1.05 }}
-            viewport={{ once: true, amount: 0.8 }}
+            initial={{ opacity: 0, scale: 1.4 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2 }}
+            // transition={{ duration: 0.2, delay: reviewIndex * 1.05 }}
+            // viewport={{ once: true, amount: 0.8 }}
             className="flex flex-col gap-7"
           >
             <span className="w-12.5 h-12.5">

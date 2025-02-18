@@ -161,7 +161,6 @@ body {
   opacity: 1;
 }
 
-
 .c-checkbox input[type="checkbox"]:checked + .c-checkbox svg {
   opacity: 1;
 }
@@ -368,11 +367,11 @@ body {
 }
 .hero-bg-1 {
   bottom: 0px;
-  background-image: url("/images/landing/hero_bg_grad_2.png");
+  background-image: url("/images/landing/hero_bg_grad_2.webp");
 }
 .hero-bg-2 {
   bottom: -187px;
-  background-image: url("/images/landing/hero_bg_grad_1.png");
+  background-image: url("/images/landing/hero_bg_grad_1.webp");
 }
 @media (min-width: 460px) {
   .hero-bg-1 {
