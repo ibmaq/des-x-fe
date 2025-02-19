@@ -4,31 +4,39 @@ import Link from "next/link";
 export const Button = ({
   text,
   icon,
-  theme = "primary" | "secondary" | "tertiary",
+  theme = "primary",
   link = null,
   width = null,
   onClick = () => {},
-  classes = {},
+  classes = "",
   styles = {},
 }) => {
-  return (
-    <button
-      className={`uppercase flex items-center justify-between backdrop-blur-10 border whitespace-nowrap p-5 rounded-2.5 ${
-        theme === "primary"
-          ? "bg-primary hover:bg-c-blue border-c-blue text-white"
-          : theme === "secondary"
-          ? "bg-c-white hover:bg-c-white/80 border-white "
-          : "bg-transparent border-white text-white backdrop-blur-10"
-      } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 hover:rounded-12 transition-all duration-150 ease-linear ${
-        width || "w-full max-w-105.5"
-      } ${classes ?? null}`}
-      onClick={onClick}
-      style={styles ? { ...styles } : {}}
-    >
-      {link ? <Link href={link}>{text}</Link> : text}
+  const buttonClasses = `uppercase flex items-center justify-between backdrop-blur-10 border whitespace-nowrap p-5 rounded-2.5 ${
+    theme === "primary"
+      ? "bg-primary hover:bg-c-blue border-c-blue text-white"
+      : theme === "secondary"
+      ? "bg-c-white hover:bg-c-white/80 border-white"
+      : "bg-transparent border-white text-white backdrop-blur-10"
+  } font-extrabold text-base lg:text-xl leading-none -tracking-0.19 hover:rounded-12 transition-all duration-150 ease-linear ${
+    width || "w-full max-w-105.5"
+  } ${classes}`;
+
+  const buttonContent = (
+    <>
+      {text}
       <span className="size-7">
         <Icon name={icon} theme={theme} />
       </span>
+    </>
+  );
+
+  return link ? (
+    <Link href={link} className={buttonClasses}>
+      {buttonContent}
+    </Link>
+  ) : (
+    <button className={buttonClasses} onClick={onClick} style={styles}>
+      {buttonContent}
     </button>
   );
 };
