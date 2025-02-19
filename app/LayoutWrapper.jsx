@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import { Navbar } from "./reusable-components/Navbar";
 import { Footer } from "./reusable-components/Footer";
 import Lenis from "lenis";
+import { usePathname } from "next/navigation";
 
 export default function LayoutWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [showLine, setShowLine] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,8 +21,19 @@ export default function LayoutWrapper({ children }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.07,
-      smoothWheel: true, 
+      lerp: 0.1,
+      smoothWheel: true,
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = anchor.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          lenis.scrollTo(targetElement, { duration: 1.5 });
+        }
+      });
     });
 
     function raf(time) {
@@ -34,6 +47,10 @@ export default function LayoutWrapper({ children }) {
       lenis.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="relative w-full h-full">
