@@ -95,12 +95,13 @@ export const LatestWorks = () => {
       </div>
       <div className="flex flex-col gap-10">
         {worksData.map((work, workIndex) => (
-          <Link
+          <a
             key={workIndex}
             href={work.link !== "coming-soon" ? work.link : "#"}
+            
             // className="latest-works-card p-5 border border-c-white/30 rounded-xl bg-c-black-2 overflow-hidden"
             className="latest-works-card-wrapper overflow-hidden"
-            scroll={work.link !== "coming-soon" ? true : false}
+            // scroll={work.link !== "coming-soon" ? true : false}
           >
             <div className="latest-works-card p-5 bg-c-black-2">
               <div className="flex flex-col lg:flex-row gap-10 z-2">
@@ -189,7 +190,7 @@ export const LatestWorks = () => {
                 </div>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </div>

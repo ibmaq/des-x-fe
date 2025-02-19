@@ -53,9 +53,10 @@ export const Footer = () => {
         <p className="text-c-black text-13.5 c-md:text-15.5 -tracking-1 leading-none">
           Your Search for a design partner ends here..
         </p>
-        <Link
+        <a
           ref={textRef}
           href={"/contact-us"}
+          // 
           className="relative group overflow-hidden"
           style={{
             height: customSizes.height,
@@ -77,7 +78,7 @@ export const Footer = () => {
           >
             GET IN TOUCH
           </h2>
-        </Link>
+        </a>
       </div>
     </footer>
   );

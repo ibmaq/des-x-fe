@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Navbar } from "./reusable-components/Navbar";
 import { Footer } from "./reusable-components/Footer";
 import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 import { usePathname } from "next/navigation";
 
 export default function LayoutWrapper({ children }) {
@@ -48,9 +49,9 @@ export default function LayoutWrapper({ children }) {
     };
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
   return (
     <div className="relative w-full h-full">

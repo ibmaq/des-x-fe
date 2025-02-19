@@ -13,8 +13,9 @@ export const Hero = () => {
         <div className="flex flex-col gap-28.5">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
-              <Link
+              <a
                 href={"/work/pendfunds"}
+                
                 className="pill-anim-border w-fit mx-auto text-white bg-c-gray-1 pl-1 pr-2.5 py-1 cursor-pointer"
               >
                 <div className="pulse-shadow-wrapper"></div>
@@ -47,7 +48,7 @@ export const Hero = () => {
                     </span>{" "}
                   </p>
                 </div>
-              </Link>
+              </a>
               <h1 className="font-bebas text-white text-16.5 c-md:text-29 2xl:text-41.5 leading-none -tracking-3  c-md:-tracking-5 2xl:text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}

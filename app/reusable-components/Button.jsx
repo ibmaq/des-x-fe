@@ -30,13 +30,15 @@ export const Button = ({
     </>
   );
 
-  const ButtonElement = (
+  return link ? (
+    <a href={link} className={buttonClasses} >
+      {buttonContent}
+    </a>
+  ) : (
     <button className={buttonClasses} onClick={onClick} style={styles}>
       {buttonContent}
     </button>
   );
-
-  return link ? <Link href={link}>{ButtonElement}</Link> : ButtonElement;
 };
 
 const Icon = ({ name, theme }) => {

@@ -47,11 +47,12 @@ function ParallaxLogos({ baseVelocity = 1 }) {
         <motion.div className="scroller flex gap-4" style={{ x }}>
           {[...Array(4)].map((_, repeatIdx) =>
             worksData.map((work, workIndex) => (
-              <Link
+              <a
                 className="w-[194px] c-md:w-[388px]"
                 key={`${repeatIdx}-${workIndex}`}
                 href={work.link !== "coming-soon" ? work.link : "#"}
-                scroll={work.link !== "coming-soon" ? true : false}
+                // scroll={work.link !== "coming-soon" ? true : false}
+                
               >
                 <motion.div
                   className="flex flex-col gap-5"
@@ -79,7 +80,7 @@ function ParallaxLogos({ baseVelocity = 1 }) {
                     </div>
                   </div>
                 </motion.div>
-              </Link>
+              </a>
             ))
           )}
         </motion.div>

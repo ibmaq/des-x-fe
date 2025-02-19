@@ -61,14 +61,14 @@ export const Navbar = () => {
           active ? "rounded-b-0 delay-75" : "rounded-b-xl delay-500"
         } relative`}
       >
-        <Link href={"/"}>
+        <a href={"/"} >
           <Image
             src={"/images/logo.png"}
             alt="des-x-design-logo"
             width={137}
             height={26}
           />
-        </Link>
+        </a>
         <span
           className={`menu-burger-icon size-10 ${active ? "active" : ""}`}
           onClick={() => handleActiveState()}
@@ -122,8 +122,9 @@ export const Navbar = () => {
               className="w-full *:border *:border-transparent *:max-sm:border-b-gray-50 *:max-sm:last:border-b-0  *:lg:border-r-gray-50 *:lg:last:border-r-0"
               key={itemIndex}
             >
-              <Link
+              <a
                 href={item.link}
+                
                 className={`relative group flex items-end w-full h-full p-9 menu-link`}
                 onClick={() => handleActiveState()}
               >
@@ -138,7 +139,7 @@ export const Navbar = () => {
                 <span
                   className={`hidden lg:block absolute left-0 bottom-0 w-full h-full bg-c-white transition-transform ease-in-out duration-700 translate-y-[101%] group-hover:translate-y-0 -z-1`}
                 />
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

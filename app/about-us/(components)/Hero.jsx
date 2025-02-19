@@ -124,7 +124,8 @@ export const Hero = () => {
               text={"Book an Intro Call"}
               icon={"rightArrow"}
               theme={"secondary"}
-              width={"w-full max-w-[795px] mx-auto"}
+              width={"w-full max-w-[795px]"}
+              classes={"mx-auto"}
               link={"/contact-us"}
             />
           </div>
