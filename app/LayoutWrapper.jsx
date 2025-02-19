@@ -19,8 +19,19 @@ export default function LayoutWrapper({ children }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.07,
-      smoothWheel: true, 
+      lerp: 0.1,
+      smoothWheel: true,
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = anchor.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          lenis.scrollTo(targetElement, { duration: 1.5 });
+        }
+      });
     });
 
     function raf(time) {
