@@ -51,7 +51,7 @@ function ParallaxLogos({ baseVelocity = 1 }) {
                 className="w-[194px] c-md:w-[388px]"
                 key={`${repeatIdx}-${workIndex}`}
                 href={work.link !== "coming-soon" ? work.link : "#"}
-                scroll={work.link !== "coming-soon" ? true : false}
+                // scroll={work.link !== "coming-soon" ? true : false}
               >
                 <motion.div
                   className="flex flex-col gap-5"
