@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Navbar } from "./reusable-components/Navbar";
 import { Footer } from "./reusable-components/Footer";
+import Lenis from "lenis";
 
 export default function LayoutWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,6 +15,24 @@ export default function LayoutWrapper({ children }) {
       setIsLoading(false);
     }, 4000);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.07,
+      smoothWheel: true, 
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
   }, []);
 
   return (
