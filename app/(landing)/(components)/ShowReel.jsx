@@ -102,45 +102,47 @@ export const ShowReel = () => {
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div
-        className="w-full max-w-[343px] c-md:max-w-[656px] lg:max-w-[768px] 2xl:max-w-[1152px] pt-[193px] c-md:pt-[369px] lg:pt-[768px] 2xl:pt-[648px] relative"
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        onTouchStart={() => {
-          setIsHovering(true);
-          setTimeout(() => setIsHovering(false), 2000);
-        }}
-      >
-        <iframe
-          ref={videoARef}
-          src="https://player.vimeo.com/video/1053367262?h=905de5956f&autoplay=1&muted=1&loop=1&background=1"
-          allow="autoplay; fullscreen; picture-in-picture"
-          className="absolute top-0 left-0 w-full h-full rounded-xl border border-c-white/30 object-fill max-lg:pointer-events-none"
-          title="Showreel (Autoplay)"
-        />
-        <iframe
-          ref={videoBRef}
-          src="https://player.vimeo.com/video/1053367262?h=905de5956f"
-          allow="autoplay; fullscreen; picture-in-picture"
-          className={`absolute top-0 left-0 w-full h-full ${
-            isFullscreen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-          title="Showreel (Fullscreen)"
-        />
+    <>
+      <div className="w-full flex justify-center">
+        <div
+          className="w-full max-w-[343px] c-md:max-w-[656px] lg:max-w-[768px] 2xl:max-w-[1152px] pt-[193px] c-md:pt-[369px] lg:pt-[768px] 2xl:pt-[648px] relative"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onTouchStart={() => {
+            setIsHovering(true);
+            setTimeout(() => setIsHovering(false), 2000);
+          }}
+        >
+          <iframe
+            ref={videoARef}
+            src="https://player.vimeo.com/video/1053367262?h=905de5956f&autoplay=1&muted=1&loop=1&background=1"
+            allow="autoplay; fullscreen; picture-in-picture"
+            className="absolute top-0 left-0 w-full h-full rounded-xl border border-c-white/30 object-fill max-lg:pointer-events-none"
+            title="Showreel (Autoplay)"
+          />
+          <iframe
+            ref={videoBRef}
+            src="https://player.vimeo.com/video/1053367262?h=905de5956f"
+            allow="autoplay; fullscreen; picture-in-picture"
+            className={`absolute top-0 left-0 w-full h-full ${
+              isFullscreen ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            title="Showreel (Fullscreen)"
+          />
 
-        {isHovering && !isFullscreen && (
-          <div className="absolute inset-0 flex justify-center items-center bg-black/60 px-5">
-            <Button
-              text="See how we roll"
-              icon="play"
-              theme="primary"
-              onClick={handlePlayFullscreen}
-              className="absolute transition-transform duration-500 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            />
-          </div>
-        )}
+          {isHovering && !isFullscreen && (
+            <div className="absolute inset-0 flex justify-center items-center bg-black/60 px-5">
+              <Button
+                text="See how we roll"
+                icon="play"
+                theme="primary"
+                onClick={handlePlayFullscreen}
+                className="absolute transition-transform duration-500 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };

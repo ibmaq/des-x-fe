@@ -90,8 +90,10 @@ function ParallaxLogos({ baseVelocity = 1 }) {
 
 export const LatestWorks = () => {
   return (
-    <div className="flex gap-4 pt-5 pb-30">
-      <ParallaxLogos />
-    </div>
+    <>
+      <section className="flex gap-4 pt-5 pb-30">
+        <ParallaxLogos />
+      </section>
+    </>
   );
 };
