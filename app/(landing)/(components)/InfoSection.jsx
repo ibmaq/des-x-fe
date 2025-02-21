@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export const InfoSection = () => {
   return (
     <>
-      <section className="flex flex-col gap-15 items-center justify-center py-15 2xl:py-35 px-4 c-md:px-8 2xl:px-15">
+      <section className="flex flex-col gap-15 py-15 2xl:py-35 px-4 c-md:px-8 2xl:px-15">
         <div className="flex flex-col items-center justify-center gap-10">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -108,12 +108,28 @@ export const InfoSection = () => {
             <span className="text-c-white">Experiences </span>
           </motion.h2>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.8,
+            duration: 0.4,
+            ease: "easeIn",
+          }}
+          className="flex flex-col lg:items-center lg:justify-center"
+        >
+          <h4 className="text-2xl 2xl:text-8 leading-1.4 -tracking-0.19 text-gray-50">
+            Osama Jilani
+          </h4>
+          <p className="text-base/1.4 -tracking-0.19 text-gray-400">Founder</p>
+        </motion.div>
         <Button
           text={"Get to know us"}
           icon={"rightArrow"}
           theme={"primary"}
           width={"w-full lg:max-w-105.5"}
           link={"/about-us"}
+          classes={"lg:mx-auto"}
         />
       </section>
     </>

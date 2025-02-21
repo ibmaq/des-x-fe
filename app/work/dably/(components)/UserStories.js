@@ -9,7 +9,7 @@ export default function UserStories() {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <div className="xl:px-20 px-4 c-md:px-8 2xl:px-15 flex flex-col lg:gap-20 gap-10">
+    <div className="xl:px-20 px-4 c-md:px-8 2xl:px-15 3xl:px-0 flex flex-col lg:gap-20 gap-10">
       <h1 className="section-title text-c-white">User Stories</h1>
       <Animated
         variants={topImageVariant}
