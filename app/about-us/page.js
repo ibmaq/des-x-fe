@@ -1,3 +1,4 @@
+import { Button } from "../reusable-components/Button";
 import { ServicesOffered } from "../reusable-components/ServicesOffered";
 import { Hero } from "./(components)/Hero";
 import { LatestWorks } from "./(components)/LatestWorks";
@@ -20,6 +21,16 @@ export default function AboutUs() {
         </div>
         <ServicesOffered />
       </div>
+      <div className="sticky bottom-6 text-red-900 mx-auto w-full flex justify-center items-center z-10">
+        <Button
+          text="Let’s Discuss Your Project!"
+          icon="rightArrow"
+          link={"/contact-us"}
+          theme="primary"
+          className="inset-0 m-auto w-full h-full absolute"
+        />
+      </div>
+      <div className="mt-10" />
     </>
   );
 }

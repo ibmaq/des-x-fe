@@ -6,6 +6,7 @@ import PreciousMetals from "./(components)/PreciousMetals";
 import UserInterface from "./(components)/UserInterface";
 import UserStories from "./(components)/UserStories";
 import WireFrames from "./(components)/WireFrames";
+import { Button } from "@/app/reusable-components/Button";
 
 export default function Page() {
   return (
@@ -25,6 +26,16 @@ export default function Page() {
           <MobileWallet />
         </div>
       </div>
+      <div className="sticky bottom-6 text-red-900 mx-auto w-full flex justify-center items-center z-10 max-md:px-4">
+        <Button
+          text="Let’s Discuss Your Project!"
+          icon="rightArrow"
+          link={"/contact-us"}
+          theme="primary"
+          className="inset-0 m-auto w-full h-full absolute"
+        />
+      </div>
+      <div className="mt-10" />
     </>
   );
 }

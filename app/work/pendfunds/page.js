@@ -1,3 +1,4 @@
+import { Button } from "@/app/reusable-components/Button";
 import HeaderSection from "../dably/(components)/HeaderSection";
 import HowItHappened from "./(components)/HowItHappened";
 import Interface from "./(components)/Interface";
@@ -71,6 +72,16 @@ export default function Page() {
         <UserPersonas />
         <Interface />
       </div>
+      <div className="sticky bottom-6 text-red-900 mx-auto w-full flex justify-center items-center z-10 max-md:px-4">
+        <Button
+          text="Let’s Discuss Your Project!"
+          icon="rightArrow"
+          link={"/contact-us"}
+          theme="primary"
+          className="inset-0 m-auto w-full h-full absolute"
+        />
+      </div>
+      <div className="mt-10" />
     </>
   );
 }
