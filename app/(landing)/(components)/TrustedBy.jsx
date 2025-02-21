@@ -92,9 +92,11 @@ function ParallaxLogos({ baseVelocity = 1 }) {
 
 export const TrustedBy = () => {
   return (
-    <section className="flex flex-col items-center">
-      <h2 className="section-title">Trusted by several Funded Startups</h2>
-      <ParallaxLogos />
-    </section>
+    <>
+      <div className="flex flex-col items-center">
+        <h2 className="section-title">Trusted by several Funded Startups</h2>
+        <ParallaxLogos />
+      </div>
+    </>
   );
 };

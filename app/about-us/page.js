@@ -7,17 +7,19 @@ import { Stats } from "./(components)/Stats";
 
 export default function AboutUs() {
   return (
-    <div className="w-full mx-auto">
-      <Hero />
-      <LatestWorks />
-      <Stats />
-      <div className="hidden 2xl:block">
-        <Methodology />
+    <>
+      <div className="w-full mx-auto">
+        <Hero />
+        <LatestWorks />
+        <Stats />
+        <div className="hidden 2xl:block">
+          <Methodology />
+        </div>
+        <div className="2xl:hidden">
+          <MethodologySM />
+        </div>
+        <ServicesOffered />
       </div>
-      <div className="2xl:hidden">
-        <MethodologySM />
-      </div>
-      <ServicesOffered />
-    </div>
+    </>
   );
 }
