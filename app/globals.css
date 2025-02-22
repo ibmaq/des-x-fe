@@ -725,13 +725,12 @@ body {
   right: 60px;
 }
 
-
 .custom-border::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 12px; /* Match the div's border-radius */
-  padding: 1px; /* Adjust border thickness */
+  border-radius: 12px;
+  padding: 1px;
   background: linear-gradient(90deg, #374151 0%, #5647ff 100%);
   -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
   -webkit-mask-composite: xor;

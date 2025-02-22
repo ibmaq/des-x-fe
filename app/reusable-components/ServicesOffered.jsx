@@ -78,6 +78,7 @@ export const ServicesOffered = () => {
                 width={616}
                 height={333}
                 className="rounded-1 w-full lg:max-w-113.5 lg:h-83.25"
+                unoptimized
               />
             </div>
           ))}

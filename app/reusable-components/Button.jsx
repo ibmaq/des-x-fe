@@ -99,8 +99,9 @@ const Icon = ({ name, theme }) => {
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
+        className="animate-pulse"
       >
-        <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+        <circle cx={12} cy={12} r={10} />
       </svg>
     ),
   };
