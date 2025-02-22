@@ -10,7 +10,6 @@ export const ShowReel = () => {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [lastTime, setLastTime] = useState(0);
 
   useEffect(() => {
     const scriptUrl = "https://player.vimeo.com/api/player.js";
@@ -45,11 +44,7 @@ export const ShowReel = () => {
   }, [isScriptLoaded]);
 
   const handlePlayFullscreen = async () => {
-    if (playerARef.current) {
-      // const currentTime = await playerARef.current.getCurrentTime();
-      // setLastTime(currentTime);
-      await playerARef.current.pause();
-    }
+    if (playerARef.current) await playerARef.current.pause();
 
     if (videoBRef.current) {
       if (!playerBRef.current) {
@@ -79,10 +74,7 @@ export const ShowReel = () => {
             await playerBRef.current.pause();
             await playerBRef.current.setCurrentTime(0);
 
-            if (playerARef.current) {
-              // await playerARef.current.setCurrentTime(lastTime);
-              await playerARef.current.play();
-            }
+            if (playerARef.current) await playerARef.current.play();
           }
         });
       } else {
