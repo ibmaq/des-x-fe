@@ -23,7 +23,7 @@ export default function AboutUs() {
       </div>
       <Link
         href="/contact-us"
-        className="sticky bottom-6 group mx-auto w-11/12 md:w-fit  flex justify-center items-center z-10 max-md:px-4 custom-border p-3 bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden"
+        className="hover:rounded-2xl transition-all duration-150 ease-linear sticky bottom-6 group mx-auto w-11/12 md:w-fit  flex justify-center items-center z-10 max-md:px-4 custom-border p-3 bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden"
       >
         <button className="w-full md:w-[423px] uppercase flex items-center justify-between border whitespace-nowrap p-5 rounded-2.5 bg-primary group-hover:bg-c-blue border-c-blue text-white font-extrabold text-base lg:text-xl leading-none -tracking-0.19 group-hover:rounded-12 transition-all duration-150 ease-linear">
           Let’s Discuss Your Project!
