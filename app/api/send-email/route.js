@@ -13,8 +13,8 @@ export async function POST(req) {
     } = await req.json();
 
     const response = await resend.emails.send({
-      from: "ibrahimaq99@gmail.com", // Must be a verified sender in Resend
-      to: "ibrahimaq99@gmail.com",
+      from: "leads@desx.design",
+      to: "desxsolutions@gmail.com",
       subject: `Lead | ${fullName}`,
       text: `
         Full Name: ${fullName}

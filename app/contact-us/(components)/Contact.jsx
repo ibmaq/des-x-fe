@@ -25,8 +25,6 @@ export default function Contact() {
     budget: "",
   });
   const handleChange = (e) => {
-    e.stopPropagation(); // Prevent double event from bubbling up
-
     const { name, value, type, checked } = e.target;
 
     if (type === "checkbox") {
@@ -37,7 +35,10 @@ export default function Contact() {
           : prev.selectedServices.filter((service) => service !== value),
       }));
     } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
     }
   };
 
@@ -55,26 +56,29 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  //   try {
+  //     const response = await fetch("/api/send-email", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      const data = await response.json();
-      if (data.success) {
-        alert("Email sent successfully!");
-      } else {
-        alert("Failed to send email.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Something went wrong.");
-    }
+  //     const data = await response.json();
+  //     if (data.success) {
+  //       alert("Email sent successfully!");
+  //     } else {
+  //       alert("Failed to send email.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error sending email:", error);
+  //     alert("Something went wrong.");
+  //   }
+  // };
+  const handleSubmit = () => {
+    console.log(" handleSubmit ~ formData:", formData);
   };
 
   return (
@@ -247,6 +251,7 @@ export default function Contact() {
             icon={"rightArrow"}
             theme={"primary"}
             width={"w-full"}
+            onClick={handleSubmit}
           />
         </motion.form>
       </div>
