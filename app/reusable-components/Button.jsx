@@ -25,7 +25,7 @@ export const Button = ({
   const buttonContent = (
     <>
       {text}
-      <span className={`size-7 ${isLoading ? "animate-spin" : ""}`}>
+      <span className={`size-7  ${isLoading ? "*:animate-spin" : ""}`}>
         <Icon name={icon} theme={theme} />
       </span>
     </>
