@@ -13,9 +13,10 @@ export async function POST(req) {
     } = await req.json();
 
     const response = await resend.emails.send({
-      from: "leads@desx.design",
-      to: "desxsolutions@gmail.com",
-      subject: `Lead | ${fullName}`,
+      // from: "DES X Design <leads@desx.design>",
+      from: "DES X Design <leads@test.com>",
+      to: "ibrahimaq99@gmail.com",
+      subject: `New Lead | ${fullName}`,
       text: `
         Full Name: ${fullName}
         Email: ${businessEmail}

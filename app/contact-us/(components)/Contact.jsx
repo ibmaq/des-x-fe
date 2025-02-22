@@ -1,7 +1,8 @@
 "use client";
 import { Button } from "@/app/reusable-components/Button";
 import { contactBudgetsList, contactServicesList } from "@/public/utils/data";
-import { motion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { flightRouterStateSchema } from "next/dist/server/app-render/types";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
@@ -23,6 +24,11 @@ export default function Contact() {
     projectDetails: "",
     selectedServices: [],
     budget: "",
+  });
+  const [sendStatus, setSendStatus] = useState({
+    show: false,
+    response: "error",
+    status: "idle",
   });
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -56,29 +62,60 @@ export default function Contact() {
     });
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSendStatus((prev) => ({
+      ...prev,
+      status: "sending",
+    }));
+    const finalFormData = {
+      ...formData,
+      budget: budgetConfig.selectedBudget,
+    };
 
-  //   try {
-  //     const response = await fetch("/api/send-email", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(formData),
-  //     });
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(finalFormData),
+      });
 
-  //     const data = await response.json();
-  //     if (data.success) {
-  //       alert("Email sent successfully!");
-  //     } else {
-  //       alert("Failed to send email.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error sending email:", error);
-  //     alert("Something went wrong.");
-  //   }
-  // };
-  const handleSubmit = () => {
-    console.log(" handleSubmit ~ formData:", formData);
+      const data = await response.json();
+      if (data.success && data.response.error === null) {
+        setSendStatus({
+          show: true,
+          response: "success",
+          status: "idle",
+        });
+        setFormData({
+          fullName: "",
+          businessEmail: "",
+          projectDetails: "",
+          selectedServices: [],
+          budget: "",
+        });
+        setBudgetConfig((prev) => ({
+          ...prev,
+          selectedBudget: null,
+        }));
+      } else {
+        setSendStatus({
+          show: true,
+          response: "error",
+          status: "idle",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Something went wrong.");
+    }
+    setTimeout(() => {
+      setSendStatus({
+        show: false,
+        response: "error",
+        status: "idle",
+      });
+    }, 2000);
   };
 
   return (
@@ -246,13 +283,37 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <Button
-            text={"Send Message"}
-            icon={"rightArrow"}
-            theme={"primary"}
-            width={"w-full"}
-            onClick={handleSubmit}
-          />
+          <div>
+            <div className="relative w-full">
+              <AnimatePresence>
+                {sendStatus.show && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 100 }}
+                    transition={{ duration: 0.4 }}
+                    className={`absolute bottom-full mb-4 w-fit inset-x-0 mx-auto px-4 p-3 bg-black/10 backdrop-blur rounded-full text-xl font-bold ${
+                      sendStatus.response === "success"
+                        ? "text-green-500 pill-anim-border"
+                        : "text-red-500 border border-red-400"
+                    }`}
+                  >
+                    {sendStatus.response === "success"
+                      ? "Email Sent Successfully!"
+                      : "Unsuccessful! Please try again."}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
+            <Button
+              text={"Send Message"}
+              icon={sendStatus.status === "sending" ? "loader" : "rightArrow"}
+              theme={"primary"}
+              width={"w-full"}
+              onClick={handleSubmit}
+              isLoading={sendStatus.status === "sending"}
+            />
+          </div>
         </motion.form>
       </div>
 
