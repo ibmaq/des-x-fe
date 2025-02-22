@@ -56,7 +56,7 @@ export const DesignExcellence = () => {
 
   return (
     <>
-      <section className="services flex flex-col gap-20 items-center justify-center px-4 c-md:px-8 2xl:px-15 py-35">
+      <section className="services flex flex-col gap-20 items-center justify-center px-4 c-md:px-8 2xl:px-15 3xl:px-0 py-35">
         <div className="flex flex-col gap-3 items-center text-center">
           <h2 className="section-title">
             How we Make sure you receive the Best!

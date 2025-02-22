@@ -11,7 +11,7 @@ import {
   useAnimationFrame,
   wrap,
 } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { worksData } from "@/public/utils/data";
 
 function ParallaxLogos({ baseVelocity = 1 }) {
@@ -28,8 +28,9 @@ function ParallaxLogos({ baseVelocity = 1 }) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef(1);
+  const [hovered, setHovered] = useState(false);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * (hovered ? (0.4 * baseVelocity) : baseVelocity) * (delta / 1000);
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;
     } else if (velocityFactor.get() > 0) {
@@ -42,7 +43,12 @@ function ParallaxLogos({ baseVelocity = 1 }) {
   });
 
   return (
-    <div id="works" className="w-full max-w-[calc(100vw-16px)] overflow-hidden">
+    <div
+      id="works"
+      className="w-full max-w-[calc(100vw-16px)] overflow-hidden"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <div className="w-full flex py-10">
         <motion.div className="scroller flex gap-4" style={{ x }}>
           {[...Array(4)].map((_, repeatIdx) =>
@@ -51,13 +57,14 @@ function ParallaxLogos({ baseVelocity = 1 }) {
                 className="w-[194px] c-md:w-[388px]"
                 key={`${repeatIdx}-${workIndex}`}
                 href={work.link !== "coming-soon" ? work.link : "#"}
-                // scroll={work.link !== "coming-soon" ? true : false}
               >
                 <motion.div
                   className="flex flex-col gap-5"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <div className="border border-c-white/30 rounded-md overflow-hidden">
                     <Image
