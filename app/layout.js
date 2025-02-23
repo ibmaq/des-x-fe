@@ -25,11 +25,11 @@ export const metadata = {
     title: "DesX Design - Premium UX/UI Design for Startups",
     description:
       "DesX Design helps startups ship faster, convert better, and raise more with high-impact UX/UI design.",
-    url: "https://des-x.vercel.app", // Update to "https://desx.design" when live
+    url: "https://desx.design",
     siteName: "DesX Design",
     images: [
       {
-        url: "https://des-x.vercel.app/images/logo.png", // Update when live
+        url: "https://desx.design/images/logo.png",
         width: 800,
         height: 600,
         alt: "DesX Design Logo",
@@ -55,8 +55,8 @@ export const metadata = {
         "DESXDESIGNS",
         "DesX Designs",
       ],
-      url: "https://des-x.vercel.app", // Update to "https://desx.design" when live
-      logo: "https://des-x.vercel.app/images/logo.png", // Update when live
+      url: "https://desx.design",
+      logo: "https://desx.design/images/logo.png",
       description:
         "DesX Design helps startups ship faster, convert better, and raise more with high-impact UX/UI design. No templates — just tailored solutions that drive results.",
       sameAs: [
