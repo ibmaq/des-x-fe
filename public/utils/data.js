@@ -89,27 +89,27 @@ export const worksData = [
 export const reviewsData = [
   {
     id: 0,
-    title: "John Doe",
-    designation: "Designation",
+    title: "Hannes Robbier",
+    designation: "Chair and Organiser - World Usability Congress",
     content:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-    img: "/images/works/pendfunds.png",
+      "Thanks for the amazing work! DesX team helped us create a scalable and easy to use design system for our Software from Scratch & were always responsive to feedback. Highly Recommended!",
+    img: "/images/testimonials/hannes.png",
   },
   {
     id: 1,
-    title: "John Doe",
-    designation: "Designation",
+    title: "Julian Nevin",
+    designation: "CEO & Founder - NOIMACKI",
     content:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-    img: "/images/works/pendfunds.png",
+      "There is a reason the company is highly rated from myself and previous! I was constantly being updated throughout the process alongside amazing suggestions and inputs. We’ll be working for hopefully many years to come!",
+    img: "/images/testimonials/julian.png",
   },
   {
     id: 2,
-    title: "John Doe",
-    designation: "Designation",
+    title: "Ayomide",
+    designation: "CEO & Founder - PENDFUNDS",
     content:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut al",
-    img: "/images/works/pendfunds.png",
+      "I am blown away as to how the team was able to bring my vision to life. Even though I had already mapped out most of the flows - Osama & his team’s input & result made a BIG difference. I’m sure the product wouldn’t be as good without them.",
+    img: "/images/testimonials/ayomide.png",
   },
 ];
 
