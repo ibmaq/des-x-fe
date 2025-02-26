@@ -119,28 +119,28 @@ export const servicesData = [
     title: "WEB App DESIGN",
     content:
       "From dashboards to complex workflows, we design intuitive and scalable web applications that deliver a seamless user experience across all devices.",
-    img: "/images/services/web-app-design.png",
+    img: "/images/services/web-app-design.webp",
   },
   {
     id: 1,
     title: "Mobile App Design",
     content:
       "We create sleek, user-friendly mobile app designs that engage users and bring your ideas to life on both iOS and Android platforms.",
-    img: "/images/services/mobile-app-design.png",
+    img: "/images/services/mobile-app-design.webp",
   },
   {
     id: 2,
     title: "LANDING PAGE",
     content:
       "First impressions matter. Our landing pages are crafted to captivate visitors, communicate your value, and drive conversions.",
-    img: "/images/services/landing-page.png",
+    img: "/images/services/landing-page.webp",
   },
   {
     id: 3,
     title: "Pitch Deck",
     content:
       "Need to make an impact? We design visually stunning and persuasive pitch decks that help you communicate your ideas effectively and win over stakeholders",
-    img: "/images/services/pitch-deck.png",
+    img: "/images/services/pitch-deck.webp",
   },
 ];
 
