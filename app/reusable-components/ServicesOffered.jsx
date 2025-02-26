@@ -49,19 +49,19 @@ export const ServicesOffered = () => {
           </p>
         </div>
         <div className="flex flex-col gap-10" ref={sectionRef}>
-          {servicesData.map((work, workIndex) => (
+          {servicesData.map((service, serviceIndex) => (
             <div
-              key={workIndex}
+              key={serviceIndex}
               className="flex flex-col-reverse lg:flex-row lg:justify-between gap-10 p-5 2xl:p-10 border border-c-white/30 rounded-xl bg-c-black-2"
-              ref={(el) => (cardsRef.current[workIndex] = el)}
+              ref={(el) => (cardsRef.current[serviceIndex] = el)}
             >
               <div className="flex flex-col gap-8 lg:gap-48 2xl:justify-between">
                 <div className="flex flex-col">
                   <p className="text-13.5/none c-md:text-20/none 2xl:text-30/none text-c-white font-bebas -tracking-2">
-                    {work.title}
+                    {service.title}
                   </p>
                   <p className="flex gap-2 text-sm/1.4 c-md:text-xl text-gray-400 capitalize">
-                    {work.content}
+                    {service.content}
                   </p>
                 </div>
                 <Button
@@ -73,7 +73,7 @@ export const ServicesOffered = () => {
                 />
               </div>
               <Image
-                src={work.img}
+                src={service.img}
                 alt="mobile-prototype-design"
                 width={616}
                 height={333}
