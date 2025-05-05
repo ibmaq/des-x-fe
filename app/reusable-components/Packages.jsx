@@ -41,7 +41,7 @@ export const Packages = () => {
         <div className="flex flex-col gap-3 items-center text-center">
           <h2 className="section-title">We keep it simple & Flexible</h2>
           <p className="text-gray-300 text-base font-medium capitalize">
-            Choose whatever suites your needs & let get started!
+            Choose whatever suites your needs & let's get started!
           </p>
         </div>
         {/* <div className="flex flex-col gap-20 lg:mx-12"> */}
