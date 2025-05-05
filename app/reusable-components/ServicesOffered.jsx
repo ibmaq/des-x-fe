@@ -43,10 +43,14 @@ export const ServicesOffered = () => {
         <div className="flex flex-col gap-3 items-center text-center">
           <h2 className="section-title">What we do</h2>
           <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">
+            We help you build and scale your product from start to finish with
+            multiple services at one place.
+          </p>
+          {/* <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">
             Today's users judge fast and scroll faster. We create{" "}
             <br className="max-sm:hidden" /> designs that stop them in their
             tracks through...
-          </p>
+          </p> */}
         </div>
         <div className="flex flex-col gap-10" ref={sectionRef}>
           {servicesData.map((service, serviceIndex) => (

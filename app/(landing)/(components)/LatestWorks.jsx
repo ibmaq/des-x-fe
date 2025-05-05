@@ -89,9 +89,9 @@ export const LatestWorks = () => {
         <div className="flex flex-col gap-3 items-center text-center">
           <h2 className="section-title">Who we have Helped</h2>
           <p className="text-gray-300 text-base c-md:text-xl/normal font-medium capitalize">
-            Today's users judge fast and scroll faster. We create{" "}
-            <br className="max-sm:hidden" /> designs that stop them in their
-            tracks through...
+            We’ve helped startups kickstart their MVP’s{" "}
+            <br className="sm:hidden" />
+            and get $100k+ in seed fundings
           </p>
         </div>
         <div className="flex flex-col gap-10">
