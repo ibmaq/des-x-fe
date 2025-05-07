@@ -5,6 +5,7 @@ import { LatestWorks } from "./(components)/LatestWorks";
 import Methodology from "./(components)/Methodology";
 import MethodologySM from "./(components)/Methodology-sm";
 import { Stats } from "./(components)/Stats";
+import Founders from "./(components)/Founders";
 
 export default function AboutUs() {
   return (
@@ -19,6 +20,7 @@ export default function AboutUs() {
         <div className="2xl:hidden">
           <MethodologySM />
         </div>
+        <Founders />
         <ServicesOffered />
       </div>
       <Link
