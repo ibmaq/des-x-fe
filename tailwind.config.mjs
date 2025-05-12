@@ -30,6 +30,7 @@ export default {
         "c-black-2": "#0F0F0F",
         "c-blue": "#7C70FF",
         "c-gray-1": "#1F2A37",
+        "c-gray-2": "#808080",
         "c-hr": "#282729",
       },
       opacity: {
@@ -46,6 +47,7 @@ export default {
         8: "2rem", // 32px
         10: "2.5rem", // 40px
         10.5: "2.625rem", // 42px
+        11.5: "2.875rem", // 46px
         13.5: "3.375rem", // 54px
         14: "3.5rem", // 56px
         58: "3.625rem", // 58px

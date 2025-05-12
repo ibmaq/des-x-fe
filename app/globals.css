@@ -732,7 +732,8 @@ body {
   border-radius: 12px;
   padding: 1px;
   background: linear-gradient(90deg, #374151 0%, #5647ff 100%);
-  -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -740,4 +741,23 @@ body {
 }
 .custom-border:hover::before {
   border-radius: 16px;
+}
+
+.founders-gradient-border {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 49.54%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .founders-gradient-border {
+    width: 800px;
+    margin-inline: auto;
+  }
 }

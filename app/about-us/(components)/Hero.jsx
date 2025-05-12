@@ -65,6 +65,7 @@ export const Hero = () => {
                         height: "auto",
                       }}
                       className="w-full h-full object-cover border border-c-white/30 rounded-9.6"
+                      unoptimized
                     />
                   </motion.div>
                 </motion.div>{" "}
