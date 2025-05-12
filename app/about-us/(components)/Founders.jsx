@@ -1,36 +1,36 @@
 "use client";
-import { motion } from "framer-motion"; // Changed from motion/react to framer-motion
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Founders() {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
+  const [isMobile, setIsMobile] = useState(false);
 
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      filter: "blur(8px)",
-      x: -50,
-      y: -50,
-    },
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1280);
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const desktopItemVariants = {
+    hidden: { opacity: 0, filter: "blur(8px)", x: -50, y: -50 },
     visible: {
       opacity: 1,
       filter: "blur(0px)",
       x: 0,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const mobileItemVariants = {
+    hidden: { opacity: 0, y: -40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -49,103 +49,201 @@ export default function Founders() {
           >
             Meet the Founders
           </motion.p>
-          {/* To-animate */}
-          <motion.div
-            className="flex flex-col 2xl:flex-row gap-10 2xl:gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={containerVariants}
-          >
-            <motion.div
-              className="flex flex-col gap-5 2xl:gap-10 2xl:w-1/2"
-              variants={containerVariants}
-            >
-              <motion.div variants={itemVariants}>
+
+          {/* Desktop Layout - Sequential Appearance */}
+          {!isMobile && (
+            <div className="flex flex-col 2xl:flex-row gap-10 2xl:gap-8">
+              {/* Founder 1 */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={desktopItemVariants}
+                className="flex flex-col gap-5 2xl:gap-10 2xl:w-1/2"
+              >
                 <Image
                   src={"/images/founder-img.webp"}
-                  alt="mobile-prototype-design"
+                  alt="Founder Osama Jilani"
                   width={644}
                   height={577}
                   className="rounded-1 w-full"
                   unoptimized
                 />
-              </motion.div>
-
-              <motion.div
-                className="flex flex-col gap-5"
-                variants={itemVariants}
-              >
-                <div className="flex flex-col max-2xl:gap-4">
-                  <div className="flex flex-col 2xl:flex-row justify-between">
-                    <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
-                      Osama Jilani
-                    </p>
-                    <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
-                      Product Designer
+                <motion.div
+                  className="flex flex-col gap-5"
+                  variants={desktopItemVariants}
+                >
+                  <div className="flex flex-col max-2xl:gap-4">
+                    <div className="flex flex-col 2xl:flex-row justify-between">
+                      <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
+                        Osama Jilani
+                      </p>
+                      <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
+                        Product Designer
+                      </p>
+                    </div>
+                    <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
+                      Founder
                     </p>
                   </div>
-                  <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
-                    Founder
-                  </p>
-                </div>
+                </motion.div>
+
+                <motion.p
+                  variants={desktopItemVariants}
+                  className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+                >
+                  We don't just design to make things look pretty, we design to
+                  solve real problems, communicate clearly, and help businesses
+                  scale. From SaaS dashboards to mobile apps; We've helped teams
+                  bring clarity to chaos and turn rough ideas into powerful user
+                  experiences.
+                </motion.p>
               </motion.div>
 
-              <motion.p
-                variants={itemVariants}
-                className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+              {/* Founder 2 with 1s delay */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={desktopItemVariants}
+                transition={{ delay: 1 }}
+                className="flex flex-col gap-5 2xl:gap-10 2xl:w-1/2"
               >
-                We don't just design to make things look pretty, we design to
-                solve real problems, communicate clearly, and help businesses
-                scale. From SaaS dashboards to mobile apps; We've helped teams
-                bring clarity to chaos and turn rough ideas into powerful user
-                experiences.
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="flex flex-col gap-5 2xl:gap-10 2xl:w-1/2"
-              variants={containerVariants}
-            >
-              <motion.div variants={itemVariants}>
                 <Image
                   src={"/images/co-founder-img.webp"}
-                  alt="mobile-prototype-design"
+                  alt="Co-Founder Ibrahim Qureshi"
                   width={644}
                   height={577}
                   className="rounded-1 w-full"
                   unoptimized
                 />
-              </motion.div>
-
-              <motion.div
-                className="flex flex-col gap-5"
-                variants={itemVariants}
-              >
-                <div className="flex flex-col max-2xl:gap-4">
-                  <div className="flex flex-col 2xl:flex-row justify-between">
-                    <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
-                      Ibrahim Qureshi
-                    </p>
-                    <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
-                      Software Engineer
+                <motion.div
+                  className="flex flex-col gap-5"
+                  variants={desktopItemVariants}
+                >
+                  <div className="flex flex-col max-2xl:gap-4">
+                    <div className="flex flex-col 2xl:flex-row justify-between">
+                      <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
+                        Ibrahim Qureshi
+                      </p>
+                      <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
+                        Software Engineer
+                      </p>
+                    </div>
+                    <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
+                      Co-Founder
                     </p>
                   </div>
-                  <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
-                    Co-Founder
-                  </p>
-                </div>
+                </motion.div>
+
+                <motion.p
+                  variants={desktopItemVariants}
+                  className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+                >
+                  I turn ideas into clean, scalable software—fast. From system
+                  design to UI, I build with purpose, work with focus, and keep
+                  things clear—even when they get complicated.
+                </motion.p>
+              </motion.div>
+            </div>
+          )}
+
+          {/* Mobile Layout - Independent Scroll Triggers */}
+          {isMobile && (
+            <div className="flex flex-col gap-20">
+              {/* Founder 1 */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                variants={mobileItemVariants}
+                className="flex flex-col gap-5"
+              >
+                <Image
+                  src={"/images/founder-img.webp"}
+                  alt="Founder Osama Jilani"
+                  width={644}
+                  height={577}
+                  className="rounded-1 w-full"
+                  unoptimized
+                />
+                <motion.div
+                  className="flex flex-col gap-5"
+                  variants={mobileItemVariants}
+                >
+                  <div className="flex flex-col max-2xl:gap-4">
+                    <div className="flex flex-col 2xl:flex-row justify-between">
+                      <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
+                        Osama Jilani
+                      </p>
+                      <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
+                        Product Designer
+                      </p>
+                    </div>
+                    <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
+                      Founder
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.p
+                  variants={mobileItemVariants}
+                  className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+                >
+                  We don't just design to make things look pretty, we design to
+                  solve real problems, communicate clearly, and help businesses
+                  scale. From SaaS dashboards to mobile apps; We've helped teams
+                  bring clarity to chaos and turn rough ideas into powerful user
+                  experiences.
+                </motion.p>
               </motion.div>
 
-              <motion.p
-                variants={itemVariants}
-                className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+              {/* Founder 2 */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                variants={mobileItemVariants}
+                className="flex flex-col gap-5"
               >
-                I turn ideas into clean, scalable software—fast. From system
-                design to UI, I build with purpose, work with focus, and keep
-                things clear—even when they get complicated.
-              </motion.p>
-            </motion.div>
-          </motion.div>
+                <Image
+                  src={"/images/co-founder-img.webp"}
+                  alt="Co-Founder Ibrahim Qureshi"
+                  width={644}
+                  height={577}
+                  className="rounded-1 w-full"
+                  unoptimized
+                />
+                <motion.div
+                  className="flex flex-col gap-5"
+                  variants={mobileItemVariants}
+                >
+                  <div className="flex flex-col max-2xl:gap-4">
+                    <div className="flex flex-col 2xl:flex-row justify-between">
+                      <p className="text-11.5/none 2xl:text-20/none font-bebas text-c-white -tracking-2 2xl:-tracking-3.84">
+                        Ibrahim Qureshi
+                      </p>
+                      <p className="text-base/none 2xl:text-2xl/none text-c-gray-2 font-medium">
+                        Software Engineer
+                      </p>
+                    </div>
+                    <p className="text-2xl 2xl:text-8 leading-1.2 text-primary font-medium">
+                      Co-Founder
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.p
+                  variants={mobileItemVariants}
+                  className="text-sm/1.4 c-md:text-xl/1.2 text-gray-400 w-full"
+                >
+                  I turn ideas into clean, scalable software—fast. From system
+                  design to UI, I build with purpose, work with focus, and keep
+                  things clear—even when they get complicated.
+                </motion.p>
+              </motion.div>
+            </div>
+          )}
         </div>
       </section>
       <div className="founders-gradient-border"></div>
