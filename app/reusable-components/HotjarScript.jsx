@@ -14,7 +14,6 @@ export function useHotjar() {
   return { trackConversion };
 }
 
-// Main tracker component
 export default function HotjarTracker() {
   const pathname = usePathname();
   const { trackConversion } = useHotjar();
