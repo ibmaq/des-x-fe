@@ -1,7 +1,6 @@
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import LayoutWraper from "./LayoutWrapper";
-import HotjarTracker from "./reusable-components/HotJarScript";
 
 const bebas = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -73,7 +72,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${bebas.variable} antialiased cursor-default`}>
         <LayoutWraper>{children}</LayoutWraper>
-        <HotjarTracker />
       </body>
     </html>
   );

@@ -7,6 +7,7 @@ import { Footer } from "./reusable-components/Footer";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import { usePathname } from "next/navigation";
+import HotjarTracker from "./reusable-components/HotjarScript";
 
 export default function LayoutWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -98,6 +99,7 @@ export default function LayoutWrapper({ children }) {
           </motion.div>
         )}
       </div>
+      <HotjarTracker />
     </>
   );
 }
