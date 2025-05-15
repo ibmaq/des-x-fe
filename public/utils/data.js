@@ -148,7 +148,8 @@ export const packagesData = [
   {
     id: 0,
     title: "Design + Dev Retainers",
-    desc: "For Companies looking to get on-going support. Starting at $3k/Month",
+    desc: "For Companies looking to get on-going support.",
+    // desc: "For Companies looking to get on-going support. Starting at $3k/Month",
     recommended: true,
     offered: [
       "Daily design support with dedicated designers",
@@ -162,7 +163,8 @@ export const packagesData = [
   {
     id: 1,
     title: "One Time Project",
-    desc: "Clear Scope, Timeline & Deliverables. Starting at $2K",
+    desc: "Clear Scope, Timeline & Deliverables.",
+    // desc: "Clear Scope, Timeline & Deliverables. Starting at $2K",
     recommended: false,
     offered: [
       "50% upfront, 25% on design approval, 25% on delivery",
